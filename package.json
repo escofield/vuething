@@ -1,19 +1,47 @@
 {
-  "name": "vuething",
+  "name": "ruby",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "serve": "vue-cli-service serve --port 8080",
+    "mock": "vue-cli-service serve --port 80 --mode mock",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "view": "vue-helper-view",
+    "component": "vue-helper-component",
+    "filter": "vue-helper-filter",
+    "module": "vue-helper-module",
+    "model": "vue-helper-model",
+    "ui": "vue-helper-ui",
+    "service": "vue-helper-service",
+    "mixin": "vue-helper-mixin",
+    "gen-fonts": "node ./icons/app.font.js",
+    "svg-fix": "svgo -f ./icons -o ./icons",
+    "favicon": "node ./favicon/favicon.js",
+    "touchall": "node touchall.js",
+    "proxy": "node proxy.js"
   },
   "dependencies": {
+    "axios": "^0.18.0",
+    "axios-mock-adapter": "^1.16.0",
+    "idle-js": "^0.1.3",
+    "postcss": "^7.0.7",
+    "postcss-mixins": "^6.2.1",
     "postcss-preset-env": "^6.5.0",
+    "postcss-responsive-type": "^1.0.0",
+    "postcss-simple-vars": "^5.0.1",
+    "uuid": "^3.3.2",
+    "vee-validate": "^2.1.5",
     "vue": "^2.5.21",
+    "vue-element-loading": "^1.0.5",
+    "vue-i18n": "^8.7.0",
     "vue-router": "^3.0.1",
+    "vue-tidyroutes": "^0.1.2",
     "vuex": "^3.0.1"
   },
   "devDependencies": {
+    "pug": "^2.0.3",
+    "pug-plain-loader": "^1.0.0",
     "@vue/cli-plugin-babel": "^3.2.0",
     "@vue/cli-plugin-eslint": "^3.2.0",
     "@vue/cli-service": "^3.2.0",
@@ -21,8 +49,16 @@
     "babel-eslint": "^10.0.1",
     "eslint": "^5.8.0",
     "eslint-plugin-vue": "^5.0.0",
-    "lint-staged": "^8.1.0",
-    "vue-template-compiler": "^2.5.21"
+    "vue-template-compiler": "^2.5.21",
+    "@escofieldpublic/vue-file-helper": "^0.3.0",
+    "raw-loader": "^0.5.1",
+    "redbird": "^0.9.0",
+    "webfonts-generator": "^0.4.0",
+    "yaml-loader": "^0.5.0",
+    "touch": "^3.1.0",
+    "fs-walk": "0.0.2",
+    "icon-gen": "^1.2.2",
+    "json-loader": "^0.5.7"
   },
   "eslintConfig": {
     "root": true,
@@ -33,15 +69,33 @@
       "plugin:vue/essential",
       "@vue/prettier"
     ],
-    "rules": {},
+    "rules": {
+      "semi": 0,
+      "no-console": "off",
+      "no-unused-vars": [
+        "error",
+        {
+          "argsIgnorePattern": "^_",
+          "varsIgnorePattern": "^_"
+        }
+      ]
+    },
     "parserOptions": {
       "parser": "babel-eslint"
     }
   },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "all"
+  },
   "postcss": {
     "plugins": {
       "autoprefixer": {},
-      "postcss-preset-env": { 
+      "postcss-simple-vars": {},
+      "postcss-mixins": {},
+      "postcss-responsive-type": {},
+      "postcss-preset-env": {
         "features": {
           "nesting-rules": true,
           "custom-media-queries": true,
@@ -54,18 +108,5 @@
     "> 1%",
     "not op_mini all",
     "not ie 11"
-  ],
-  "gitHooks": {
-    "pre-commit": "lint-staged"
-  },
-  "lint-staged": {
-    "*.js": [
-      "vue-cli-service lint",
-      "git add"
-    ],
-    "*.vue": [
-      "vue-cli-service lint",
-      "git add"
-    ]
-  }
+  ]
 }

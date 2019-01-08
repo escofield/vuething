@@ -1,0 +1,18 @@
+/* only to be referenced from variables.css */
+:root{
+    --lt-base-body-color: #fff;
+    --lt-primary-color: #bb16a3;
+    --lt-primary-color-dim: #d6a0ce;
+    --lt-info-color: #256eff;
+    --lt-warning-color: #f90;
+    --lt-error-color: #d32929;
+    --lt-success-color: #19be6b;
+    --lt-base-text-color: #515a6e;
+    --lt-base-text-dim-color: #9fa7b9;
+    --lt-base-text-back: #f5f5f5;
+    --lt-button-text-color: white;
+    --lt-base-text-border: solid 1px var(--lt-base-text-back);
+    --lt-base-text-active-border: solid 1px var(--lt-primary-color);
+    --lt-base-text-hover-border: solid 1px var(--lt-primary-color-dim); 
+    --lt-button-hover-filter: brightness(130%) opacity(90%) drop-shadow(0px 1px 1px gray);
+}

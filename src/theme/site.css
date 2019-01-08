@@ -1,0 +1,175 @@
+
+html {
+    font-size: responsive .75rem 1.5rem;
+    font-range: 25rem 123.75rem;
+    color: var(--base-text-color);
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+h1 {
+    @mixin h1;
+}
+
+h2 {
+    @mixin h2;
+}
+
+h3 {
+    @mixin h3;
+
+}
+
+h4 {
+    @mixin h4;
+}
+
+h5 {
+    @mixin h5;
+}
+
+h6 {
+    @mixin h6;
+}
+
+span {
+    @mixin span;
+}
+
+p {
+    @mixin p;
+}
+
+.layout > .content {
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+input, textarea, select, button {
+    @mixin h5-font-size;
+    @mixin h4-line-height;
+    color: var(--base-text-color);
+    box-sizing: border-box;
+}
+
+input, textarea, select {
+    background-color: var(--base-text-back);
+    border: none;
+    border-radius: var(--base-text-border-radius);
+    padding: 0 1rem;
+    outline: none;
+    width: 100%;
+    box-shadow: border-box;
+}
+
+input, textarea {
+    border: var(--base-text-border);
+    transition : border 500ms ease-out;
+}
+
+input:hover, textarea:hover {
+    border: var(--base-text-hover-border);
+}
+
+input:focus, textarea:focus {
+    border: var(--base-text-active-border);
+    background-color: var(--base-body-color);
+}
+
+label {
+    color: var(--base-text-dim-color);
+    margin-bottom: .3rem;
+    margin-top: 1rem;
+}
+label.required:after {
+    content: "*";
+    color: red;
+    margin-left: .2rem;
+}
+
+input, label {
+    display: block;
+}
+
+input.prefix, input.postfix {
+    display: inline;
+}
+
+i.icon.prefix,
+i.icon.postfix {
+    position: relative;
+    @mixin h4-line-height;
+    @mixin h5-font-size;
+}
+
+i.icon.prefix:before,
+i.icon.postfix:before {
+    position: absolute;
+    padding-top:1px;
+}
+i.icon.prefix:before {
+    padding-left: .5rem;
+}
+i.icon.postfix:before {
+    right: 0px;
+    padding-right: .5rem;
+}
+input.postfix{
+    padding-right: 2rem;
+}
+input.prefix{
+    padding-left: 2rem;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    transition : all 250ms ease-in;
+    border-radius: .5rem;
+    color: transparent;
+}
+
+button:hover {
+    cursor: pointer;
+    filter: var(--button-hover-filter);
+    transform: translate(0,-2px);
+}
+button.text{ 
+    color: var(--base-text-color);
+}
+button.text:hover {
+    color: var(--primary-color);
+    filter: none;
+    transform: none;
+}
+button.default{ 
+    border: solid 1px var(--base-text-dim-color);
+    color: var(--base-text-color);
+}
+button.default:hover {
+    border: solid 1px var(--primary-color);
+    color: var(--primary-color);
+}
+button.error {
+    background-color: var(--error-color);
+    color: var(--button-text-color);
+}
+button.warning {
+    background-color: var(--warning-color);
+    color: var(--button-text-color);
+}
+button.info {
+    background-color: var(--info-color);
+    color: var(--button-text-color);
+}
+button.success {
+    background-color: var(--success-color);
+    color: var(--button-text-color);
+}
+button.primary {
+    background-color: var(--primary-color);
+    color: var(--button-text-color);
+}

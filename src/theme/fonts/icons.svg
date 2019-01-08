@@ -1,0 +1,18 @@
+<?xml version="1.0" standalone="no"?> 
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
+<svg xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <font id="icons" horiz-adv-x="200">
+    <font-face font-family="icons"
+      units-per-em="200" ascent="200"
+      descent="0" />
+    <missing-glyph horiz-adv-x="0" />
+    <glyph glyph-name="home"
+      unicode="&#xF101;"
+      horiz-adv-x="200" d=" M100 184A4.3 4.3 0 0 1 98 183C98 183 98 183 98 183L30 128H30A3.759 3.759 0 0 1 28 125V31C28 28 30 27 33 27H73V82C73 89 79 95 86 95H114C121 95 127 89 127 82V27H167C170 27 172 28 172 31V125A3.759 3.759 0 0 1 170 128H170L102 183C102 183 102 183 102 183A4.3 4.3 0 0 1 100 184zM88 87C84 87 82 84 82 81V27H118V81C118 84 116 87 112 87H100z" />
+    <glyph glyph-name="homeOutline"
+      unicode="&#xF102;"
+      horiz-adv-x="200" d=" M99 200A10.433 10.433 0 0 1 93 198L13 134A10.433 10.433 0 0 1 9 126L9 10A10.433 10.433 0 0 1 20 0H180A10.433 10.433 0 0 1 191 10V126A10.433 10.433 0 0 1 187 134L106 198A10.433 10.433 0 0 1 99 200zM99 176L170 121V21H30L30 121z" />
+  </font>
+</defs>
+</svg>

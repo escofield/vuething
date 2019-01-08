@@ -1,0 +1,22 @@
+@font-face {
+	font-family: "icons";
+	src: url("./fonts/icons.woff?d849cfeff810d376a25b2c38ba41e0ed") format("woff");
+}
+
+.icon {
+	line-height: 1;
+}
+
+.icon:before {
+	font-family: icons !important;
+	font-style: normal;
+	font-weight: normal !important;
+	vertical-align: top;
+}
+
+.icon-home:before {
+	content: "\f101";
+}
+.icon-homeOutline:before {
+	content: "\f102";
+}

@@ -1,4 +1,4 @@
-# vuething
+# ruby
 
 ## Project setup
 ```

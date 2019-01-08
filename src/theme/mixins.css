@@ -1,0 +1,134 @@
+@define-mixin h1-font-size {
+  font-size: responsive 1.338rem 3.052rem;
+  font-range: 25rem 123.75rem;
+}
+
+@define-mixin h2-font-size {
+  font-size: responsive 1.262rem 2.441rem;
+  font-range: 25rem 123.75rem;
+}
+
+@define-mixin h3-font-size {
+  font-size: responsive 1.191rem 1.953rem;
+  font-range: 25rem 123.75rem;
+}
+
+@define-mixin h4-font-size {
+  font-size: responsive 1.124rem 1.563rem;
+  font-range: 25rem 123.75rem;
+}
+
+@define-mixin h5-font-size {
+  font-size: responsive 1.06rem 1.25rem;
+  font-range: 25rem 123.75rem;
+}
+
+@define-mixin h6-font-size {
+  font-size: responsive 1rem 1.2rem;
+  font-range: 25rem 123.75rem;
+}
+
+@define-mixin h7-font-size {
+  font-size: responsive .875rem .919rem;
+  font-range: 25rem 123.75rem;
+}
+
+@define-mixin span-font-size {
+  font-size: responsive 1rem 1.05rem;
+  font-range: 25rem 123.75rem;
+}
+
+@define-mixin p-font-size {
+  font-size: responsive 1rem 1.05rem;
+  font-range: 25rem 123.75rem;
+}
+
+@define-mixin h1-line-height {
+  line-height: responsive 2.007rem 6.104rem;
+  line-height-range: 25rem 123.75rem;
+}
+
+@define-mixin h2-line-height {
+  line-height: responsive 1.893rem 4.882rem;
+  line-height-range: 25rem 123.75rem;
+}
+ 
+@define-mixin h3-line-height {
+  line-height: responsive 1.7865rem 3.906rem;
+  line-height-range: 25rem 123.75rem;
+}
+
+@define-mixin h4-line-height {
+  line-height: responsive 1.5rem 3.126rem;
+  line-height-range: 25rem 123.75rem;
+} 
+
+@define-mixin h5-line-height {
+  line-height: responsive 1.4rem 2.16rem;
+  line-height-range: 25rem 123.75rem;
+}
+
+@define-mixin h6-line-height {
+  line-height: responsive 1rem 1.2rem;
+  line-height-range: 25rem 123.75rem;
+}
+
+@define-mixin h7-line-height {
+  line-height: responsive 1.0719rem 1.65rem;
+  line-height-range: 25rem 123.75rem;
+}
+
+@define-mixin span-line-height {
+  line-height: responsive 1.225rem 1.89rem;
+  line-height-range: 25rem 123.75rem;
+}
+
+@define-mixin p-line-height {
+  line-height: responsive 1.225rem 1.89rem;
+  line-height-range: 25rem 123.75rem;
+}
+
+@define-mixin h1 {
+  @mixin h1-font-size;
+  @mixin h1-line-height;
+}
+
+@define-mixin h2 {
+  @mixin h2-font-size;
+  @mixin h2-line-height;
+}
+
+@define-mixin h3 {
+  @mixin h3-font-size;
+  @mixin h3-line-height;
+}
+
+@define-mixin h4 {
+  @mixin h4-font-size;
+  @mixin h4-line-height;
+}
+
+@define-mixin h5 {
+  @mixin h5-font-size;
+  @mixin h5-line-height;
+}
+
+@define-mixin h6 {
+  @mixin h6-font-size;
+  @mixin h6-line-height;
+}
+
+@define-mixin h7 {
+  @mixin h7-font-size;
+  @mixin h7-line-height;
+}
+
+@define-mixin span {
+  @mixin span-font-size;
+  @mixin span-line-height;
+}
+
+@define-mixin p {
+  @mixin p-font-size;
+  @mixin p-line-height;
+}

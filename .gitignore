@@ -2,6 +2,9 @@
 node_modules
 /dist
 
+/tests/e2e/videos/
+/tests/e2e/screenshots/
+
 # local env files
 .env.local
 .env.*.local
@@ -13,9 +16,12 @@ yarn-error.log*
 
 # Editor directories and files
 .idea
-.vscode
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw*
+api.bat
+favicon/public/
+
+dbup\.bat
