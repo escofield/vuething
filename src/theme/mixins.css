@@ -1,137 +1,103 @@
 @define-mixin h1-font-size {
-  font-size: responsive 1.338rem 3.052rem;
-  font-range: 25rem 123.75rem;
+  responsive: font-size 1.338rem 3.052rem;
 }
 
 @define-mixin h2-font-size {
-  font-size: responsive 1.262rem 2.441rem;
-  font-range: 25rem 123.75rem;
+  responsive: font-size 1.262rem 2.441rem;
 }
 
 @define-mixin h3-font-size {
-  font-size: responsive 1.191rem 1.953rem;
-  font-range: 25rem 123.75rem;
+  responsive: font-size 1.191rem 1.953rem;
 }
 
 @define-mixin h4-font-size {
-  font-size: responsive 1.124rem 1.563rem;
-  font-range: 25rem 123.75rem;
+  responsive: font-size 1.124rem 1.563rem;
 }
 
 @define-mixin h5-font-size {
-  font-size: responsive 1.06rem 1.25rem;
-  font-range: 25rem 123.75rem;
+  responsive: font-size 1.06rem 1.25rem;
 }
 
 @define-mixin h6-font-size {
-  font-size: responsive 1rem 1.2rem;
-  font-range: 25rem 123.75rem;
+  responsive: font-size 1rem 1.2rem;
 }
 
 @define-mixin h7-font-size {
-  font-size: responsive .875rem .919rem;
-  font-range: 25rem 123.75rem;
+  responsive: font-size .875rem .919rem;
 }
 
-@define-mixin span-font-size {
-  font-size: responsive 1rem 1.05rem;
-  font-range: 25rem 123.75rem;
-}
-
-@define-mixin p-font-size {
-  font-size: responsive 1rem 1.05rem;
-  font-range: 25rem 123.75rem;
+@define-mixin txt-font-size {
+  responsive: font-size 1rem 1.05rem;
 }
 
 @define-mixin h1-line-height {
-  line-height: responsive 2.007rem 6.104rem;
-  line-height-range: 25rem 123.75rem;
+  responsive: line-height 2.007rem 6.104rem;
 }
 
 @define-mixin h2-line-height {
-  line-height: responsive 1.893rem 4.882rem;
-  line-height-range: 25rem 123.75rem;
+  responsive: line-height 1.893rem 4.882rem;
 }
  
 @define-mixin h3-line-height {
-  line-height: responsive 1.7865rem 3.906rem;
-  line-height-range: 25rem 123.75rem;
+  responsive: line-height 1.7865rem 3.906rem;
 }
 
 @define-mixin h4-line-height {
-  line-height: responsive 1.5rem 3.126rem;
-  line-height-range: 25rem 123.75rem;
+  responsive: line-height 1.5rem 3.126rem;
 } 
 
 @define-mixin h4-height {
-  height: responsive 1.5rem 3.126rem;
-  height-range: 25rem 123.75rem;
+  responsive: height 1.5rem 3.126rem;
 } 
 
 @define-mixin h4-width { 
-  width: responsive 1.5rem 3.126rem;
-  width-range: 25rem 123.75rem;
+  responsive: width 1.5rem 3.126rem;
 } 
 
 @define-mixin h4-background-size {
-  background-size: responsive 1.5rem 3.126rem;
-  background-size-range: 25rem 123.75rem;
+  responsive: background-size 1.5rem 3.126rem;
 } 
 
 @define-mixin h5-line-height {
-  line-height: responsive 1.4rem 2.16rem;
-  line-height-range: 25rem 123.75rem;
+  responsive: line-height 1.4rem 2.16rem;
 }
 
 @define-mixin h5-height {
-  height: responsive 1.4rem 2.16rem;
-  height-range: 25rem 123.75rem;
+  responsive: height 1.4rem 2.16rem;
 } 
 
 @define-mixin h5-width { 
-  width: responsive 1.4rem 2.16rem;
-  width-range: 25rem 123.75rem;
+  responsive: width 1.4rem 2.16rem;
 } 
 
 @define-mixin h5-background-size {
-  background-size: responsive 1.4rem 2.16rem;
-  background-size-range: 25rem 123.75rem;
+  responsive: background-size 1.4rem 2.16rem;
 } 
 
 @define-mixin h6-line-height {
-  line-height: responsive 1rem 1.2rem;
-  line-height-range: 25rem 123.75rem;
+  responsive: line-height 1rem 1.2rem;
 }
 
 @define-mixin h6-height {
-  height: responsive 1rem 1.2rem;
-  height-range: 25rem 123.75rem;
+  responsive: height 1rem 1.2rem;
 } 
 
 @define-mixin h6-width { 
-  width: responsive 1rem 1.2rem;
-  width-range: 25rem 123.75rem;
+  responsive: width 1rem 1.2rem;
 } 
 
 @define-mixin h6-background-size {
-  background-size: responsive 1rem 1.2rem;
-  background-size-range: 25rem 123.75rem;
+  responsive: background-size 1rem 1.2rem;
 } 
 
 @define-mixin h7-line-height {
-  line-height: responsive 1.0719rem 1.65rem;
-  line-height-range: 25rem 123.75rem;
+  responsive: line-height 1.0719rem 1.65rem;
 }
 
-@define-mixin span-line-height {
-  line-height: responsive 1.225rem 1.89rem;
-  line-height-range: 25rem 123.75rem;
+@define-mixin txt-line-height {
+  responsive: line-height 1.225rem 1.89rem;
 }
 
-@define-mixin p-line-height {
-  line-height: responsive 1.225rem 1.89rem;
-  line-height-range: 25rem 123.75rem;
-}
 
 @define-mixin h1 {
   @mixin h1-font-size;
@@ -168,12 +134,7 @@
   @mixin h7-line-height;
 }
 
-@define-mixin span {
-  @mixin span-font-size;
-  @mixin span-line-height;
-}
-
-@define-mixin p {
-  @mixin p-font-size;
-  @mixin p-line-height;
+@define-mixin txt {
+  @mixin txt-font-size;
+  @mixin txt-line-height;
 }
