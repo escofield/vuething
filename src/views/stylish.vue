@@ -18,7 +18,6 @@ VueTidyRoutes.route(`/:locale(\\w\\w)?/stylish`, {
 export default Stylish
 </script>
 <template lang="pug">
-
 .stylish
   h1 h1 a b c d e f g
   h2 h2 a b c 
@@ -37,14 +36,18 @@ export default Stylish
   i.icon.icon-home.prefix
   input.prefix.postfix(name="iname" value="some text")
   i.icon.icon-homeOutline.postfix
-  
-  button.primary primary
-  button.success success
-  button.info info
-  button.warning warning
-  button.error error
-  button.text text
-  button.default default
+  p
+    button.primary primary
+    button.success success
+    button.info info
+    button.warning warning
+    button.error error
+    button.text text
+    button.default default
+  select
+    option Here is the unstyled select box
+    option The second option
+    option The third option
 </template>
 <style lang="postcss" scoped>
 .stylish {

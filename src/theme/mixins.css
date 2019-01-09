@@ -63,6 +63,11 @@
   line-height-range: 25rem 123.75rem;
 } 
 
+@define-mixin h4-height {
+  height: responsive 1.5rem 3.126rem;
+  height-range: 25rem 123.75rem;
+} 
+
 @define-mixin h5-line-height {
   line-height: responsive 1.4rem 2.16rem;
   line-height-range: 25rem 123.75rem;

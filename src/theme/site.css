@@ -48,11 +48,31 @@ p {
     box-sizing: border-box;
 }
 
-input, textarea, select, button {
+input, textarea, button {
     @mixin h5-font-size;
     @mixin h4-line-height;
     color: var(--base-text-color);
     box-sizing: border-box;
+}
+select {
+    @mixin h5-font-size;
+    @mixin h4-height;
+    color: var(--base-text-color);
+    box-sizing: border-box;
+    appearance: none;
+}
+
+select:after {
+    content:"\f0dc";
+    font-family: FontAwesome;
+    padding: 12px 8px;
+    position: absolute; right: 0; top: 0;
+    z-index: 1;
+    text-align: center;
+    width: 10%;
+    height: 100%;      
+    pointer-events: none;
+    box-sizing: border-box;   
 }
 
 input, textarea, select {
@@ -65,16 +85,16 @@ input, textarea, select {
     box-shadow: border-box;
 }
 
-input, textarea {
+input, textarea, select {
     border: var(--base-text-border);
     transition : border 500ms ease-out;
 }
 
-input:hover, textarea:hover {
+input:hover, textarea:hover, select:hover {
     border: var(--base-text-hover-border);
 }
 
-input:focus, textarea:focus {
+input:focus, textarea:focus, select:focus {
     border: var(--base-text-active-border);
     background-color: var(--base-body-color);
 }
@@ -130,6 +150,7 @@ button {
     transition : all 250ms ease-in;
     border-radius: .5rem;
     color: transparent;
+    padding: 0px 1rem;
 }
 
 button:hover {
