@@ -3,6 +3,7 @@ import router from './views/index'
 import App from './App.vue'
 import './components/index'
 
+import './theme/dark-theme.css'
 import './theme/light-theme.css'
 import './theme/variables.css'
 import './theme/mixins.css'

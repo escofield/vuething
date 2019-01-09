@@ -3,6 +3,7 @@ html {
     font-size: responsive .75rem 1.5rem;
     font-range: 25rem 123.75rem;
     color: var(--base-text-color);
+    background-color: var(--base-body-color);
 }
 
 body {
@@ -89,11 +90,17 @@ input[type="checkbox"]{
 input[type="radio"]{
     border-radius: 50%;
 }
+input[type="radio"]:hover,
+input[type="checkbox"]:hover{
+    cursor:pointer;
+}
 
 input:hover, textarea:hover, select:hover {
     border: var(--base-text-hover-border);
 }
-
+select:hover{
+    cursor: pointer;
+}
 input:focus, textarea:focus, select:focus {
     border: var(--base-text-active-border);
 }
@@ -102,17 +109,21 @@ input[type="checkbox"]:checked{
     background-color: transparent;
     background-repeat: no-repeat;
     @mixin h5-background-size;
+    @mixin h5-line-height;
     background-position: center;
     border: solid 1px transparent;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cpath fill='#19be6b' d='M31.787 103.442c2.756-.117 10.81 6.84 22.959 18.033 9.436 8.695 23.456 32.68 26.29 32.799 2.906.3 13.205-39.723 42.952-87.92C143.968 33.982 166.616.296 171.327.263c3.34-.033 28.46 72.81 28.508 79.661-.024 5.103-23.977 12.177-48.24 35.68-38.87 37.656-63.03 84.273-65.793 84.191-2.105-.13-25.347-23.596-50.782-40.014C22.443 151.662.322 147.162.278 144.411c.086-2.863 9.21-9.99 18.343-21.776 4.884-6.302 10.827-19.026 13.166-19.193z'/%3E%3C/svg%3E");
 }
 input[type="radio"]:checked{
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cpath fill='#515a6e' d='M100 25.002a75 75 0 0 0-75 75 75 75 0 0 0 75 75 75 75 0 0 0 75-75 75 75 0 0 0-75-75zm12.353 15.463c22.307 4.943 45.506 20.39 50.265 63.641 0 0-18.441-35.219-24.39-32.747 7.734 13.593 7.734 32.129 7.734 32.129-7.733-32.129-43.425-47.576-43.425-47.576s21.712-.618 28.256 7.414c2.38-6.487-18.44-22.86-18.44-22.86z'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cpath fill='#19be6b' d='M100 25.002a75 75 0 0 0-75 75 75 75 0 0 0 75 75 75 75 0 0 0 75-75 75 75 0 0 0-75-75zm12.353 15.463c22.307 4.943 45.506 20.39 50.265 63.641 0 0-18.441-35.219-24.39-32.747 7.734 13.593 7.734 32.129 7.734 32.129-7.733-32.129-43.425-47.576-43.425-47.576s21.712-.618 28.256 7.414c2.38-6.487-18.44-22.86-18.44-22.86z'/%3E%3C/svg%3E");
     border: solid 1px var(--base-text-dim-color);
 }
+
 input[type="checkbox"]:disabled:after{
     filter: opacity(0.4);
 }
+
+
 label {
     color: var(--base-text-dim-color);
     margin-bottom: .3rem;

@@ -1,21 +1,18 @@
 /* only to be referenced from variables.css */
 :root{
-    --dk-base-body-color: rgb(33, 38, 39);
+    --dk-base-body-color: rgb(44, 41, 31);
     --dk-primary-color: #bb16a3;
-    --dk-primary-color-dim: #d64fc2;
+    --dk-primary-color-dim: #d6a0ce;
     --dk-info-color: #256eff;
-    --dk-info-color-dim: #518bff;
     --dk-warning-color: #f90;
-    --dk-warning-color-dim: #ffad33;
     --dk-error-color: #d32929;
-    --dk-error-color-dim: #e05959;
     --dk-success-color: #19be6b;
-    --dk-success-color-dim: #47cb89;
-    --dk-base-text-color: #515a6e;
+    --dk-base-text-color: #c4cbda;
     --dk-base-text-dim-color: #9fa7b9;
-    --dk-base-text-back: #f5f5f5;
+    --dk-base-text-back: #2b2a2a;
     --dk-button-text-color: white;
     --dk-base-text-border: solid 1px var(--lt-base-text-back);
     --dk-base-text-active-border: solid 1px var(--lt-primary-color);
-    --dk-base-text-hover-border: solid 1px var(--lt-primary-color-dim);  
+    --dk-base-text-hover-border: solid 1px var(--lt-primary-color-dim); 
+    --dk-button-hover-filter: brightness(115%) drop-shadow(0px 1px 1px gray);
 }

@@ -31,7 +31,7 @@ export default Stylish
   label.required(for="iname") Input label
   input(name="iname" value="some text")
 
-  label.required(for="iname") Input label
+  label(for="iname") Input label
 
   i.icon.icon-home.prefix
   input.prefix.postfix(name="iname" value="some text")
@@ -49,7 +49,8 @@ export default Stylish
     option The second option
     option The third option
   
-  input(type="checkbox")
+  label(for="chk1") Checkbox 1
+  input(type="checkbox" name="chk1")
 
   input(type="radio" name="radioTest" value='1') 
   | option 1
