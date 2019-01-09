@@ -20,6 +20,7 @@ export default Default
 </script>
 <template lang="pug">
 .default Hello from default component
+    i.fas.fa-igloo
 </template>
 <style scoped>
 .h7 {

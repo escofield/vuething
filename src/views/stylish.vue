@@ -48,6 +48,13 @@ export default Stylish
     option Here is the unstyled select box
     option The second option
     option The third option
+  
+  input(type="checkbox")
+
+  input(type="radio" name="radioTest" value='1') 
+  | option 1
+  input(type="radio" name="radioTest" value='2') 
+  | option 2
 </template>
 <style lang="postcss" scoped>
 .stylish {

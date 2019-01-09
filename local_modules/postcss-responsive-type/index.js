@@ -32,12 +32,21 @@ const DEFAULT_PARAMS = {
         maxSize: '100rem',
         minWidth: '25rem',
         maxWidth: '123.75rem'
+      },
+      'background-size': {
+        minSize: '0rem',
+        maxSize: '100rem',
+        minWidth: '25rem',
+        maxWidth: '123.75rem'
       }
     },
     PARAM_RANGE = {
       'font-size': 'font-range',
       'line-height': 'line-height-range',
-      'letter-spacing': 'letter-spacing-range'
+      'letter-spacing': 'letter-spacing-range',
+      'height': 'height-range',
+      'width': 'width-range',
+      'background-size': 'background-size-range',
     },
     PARAM_DECLS = {
       'font-size': {
@@ -69,6 +78,12 @@ const DEFAULT_PARAMS = {
         maxSize: 'max-width',
         minWidth: 'lower-width-range',
         maxWidth: 'upper-width-range'
+      },
+      'background-size': {
+        minSize: 'min-background-size',
+        maxSize: 'max-background-size',
+        minWidth: 'lower-background-size-range',
+        maxWidth: 'upper-background-size-range'
       }
     };
 
@@ -239,7 +254,7 @@ module.exports = postcss.plugin('postcss-responsive-type', () => {
         });
       }
 
-      rule.walkDecls(/^(font-size|line-height|letter-spacing|height|width)$/, decl => {
+      rule.walkDecls(/^(font-size|line-height|letter-spacing|height|width|background-size)$/, decl => {
         let params;
 
         // If decl doesn't contain responsve keyword, exit

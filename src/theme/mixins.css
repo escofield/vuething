@@ -68,15 +68,55 @@
   height-range: 25rem 123.75rem;
 } 
 
+@define-mixin h4-width { 
+  width: responsive 1.5rem 3.126rem;
+  width-range: 25rem 123.75rem;
+} 
+
+@define-mixin h4-background-size {
+  background-size: responsive 1.5rem 3.126rem;
+  background-size-range: 25rem 123.75rem;
+} 
+
 @define-mixin h5-line-height {
   line-height: responsive 1.4rem 2.16rem;
   line-height-range: 25rem 123.75rem;
 }
 
+@define-mixin h5-height {
+  height: responsive 1.4rem 2.16rem;
+  height-range: 25rem 123.75rem;
+} 
+
+@define-mixin h5-width { 
+  width: responsive 1.4rem 2.16rem;
+  width-range: 25rem 123.75rem;
+} 
+
+@define-mixin h5-background-size {
+  background-size: responsive 1.4rem 2.16rem;
+  background-size-range: 25rem 123.75rem;
+} 
+
 @define-mixin h6-line-height {
   line-height: responsive 1rem 1.2rem;
   line-height-range: 25rem 123.75rem;
 }
+
+@define-mixin h6-height {
+  height: responsive 1rem 1.2rem;
+  height-range: 25rem 123.75rem;
+} 
+
+@define-mixin h6-width { 
+  width: responsive 1rem 1.2rem;
+  width-range: 25rem 123.75rem;
+} 
+
+@define-mixin h6-background-size {
+  background-size: responsive 1rem 1.2rem;
+  background-size-range: 25rem 123.75rem;
+} 
 
 @define-mixin h7-line-height {
   line-height: responsive 1.0719rem 1.65rem;

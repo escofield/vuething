@@ -1,6 +1,6 @@
 @font-face {
 	font-family: "icons";
-	src: url("./fonts/icons.woff2?f79fd23a7ddf86c09deca900cb76365a") format("woff2");
+	src: url("./fonts/icons.woff2?46a55e50e0bc64d9b312f88b0197d617") format("woff2");
 }
 
 .icon {
@@ -14,9 +14,12 @@
 	vertical-align: top;
 }
 
-.icon-home:before {
+.icon-angle-down:before {
 	content: "\f101";
 }
-.icon-homeOutline:before {
+.icon-home:before {
 	content: "\f102";
+}
+.icon-homeOutline:before {
+	content: "\f103";
 }
