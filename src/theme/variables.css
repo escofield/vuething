@@ -5,16 +5,13 @@
   --primary-color-dim: var(--lt-primary-color-dim);
   --base-text-color: var(--lt-base-text-color);
   --base-text-back: var(--lt-base-text-back);
-  --base-text-active-border: var(--lt-base-text-active-border);
   --base-text-dim-color:  var(--lt-base-text-dim-color);
-  --base-text-hover-border: var(--lt-base-text-hover-border);
-  --base-text-border: var(--lt-base-text-border);
   --info-color: var(--lt-info-color);
   --warning-color: var(--lt-warning-color);
   --error-color: var(--lt-error-color);
   --success-color: var(--lt-success-color);
   --button-text-color: var(--lt-button-text-color);
-  --button-hover-filter: var(--lt-button-hover-filter);
+  --shadow-color: var(--lt-shadow-color);
   --sider-width: 10rem;
   --header-height: 5rem;
   --footer-height: 1.5rem;

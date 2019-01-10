@@ -15,8 +15,5 @@ export const cssVariables = [
   'base-text-dim-color',
   'base-text-back',
   'button-text-color',
-  'base-text-border',
-  'base-text-active-border',
-  'base-text-hover-border',
-  'button-hover-filter',
+  'shadow-color'
 ]

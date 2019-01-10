@@ -11,8 +11,5 @@
     --lt-base-text-dim-color: #9fa7b9;
     --lt-base-text-back: #f5f5f5;
     --lt-button-text-color: white;
-    --lt-base-text-border: solid 1px var(--lt-base-text-back);
-    --lt-base-text-active-border: solid 1px var(--lt-primary-color);
-    --lt-base-text-hover-border: solid 1px var(--lt-primary-color-dim); 
-    --lt-button-hover-filter: brightness(115%) drop-shadow(0px 1px 1px gray);
+    --lt-shadow-color: gray;
 }

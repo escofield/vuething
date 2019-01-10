@@ -14,7 +14,7 @@ export default {
       const theme = newValue ? 'dk' : 'lt'
       const html = document.querySelector(':root')
       cssVariables.forEach(v => {
-        html.style.setProperty(`--${v}`, `var(--${theme}-${v}`)
+        html.style.setProperty(`--${v}`, `var(--${theme}-${v})`)
       })
     },
   },
