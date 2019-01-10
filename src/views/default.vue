@@ -24,6 +24,5 @@ export default Default
 </template>
 <style scoped>
 .h7 {
-  @mixin h7;
 }
 </style>

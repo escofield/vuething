@@ -12,35 +12,44 @@ body {
 }
 
 h1 {
-    @mixin h1;
+    @mixin h1-inner font-size;
+    @mixin h1-outer line-height;
 }
 
 h2 {
-    @mixin h2;
+    @mixin h2-inner font-size;
+    @mixin h2-outer line-height;
 }
 
 h3 {
-    @mixin h3;
+    @mixin h3-inner font-size;
+    @mixin h3-outer line-height;
+
 }
 
 h4 {
-    @mixin h4;
+    @mixin h4-inner font-size;
+    @mixin h4-outer line-height;
 }
 
 h5 {
-    @mixin h5;
+    @mixin h5-inner font-size;
+    @mixin h5-outer line-height;
 }
 
 h6 {
-    @mixin h6;
+    @mixin h6-inner font-size;
+    @mixin h6-outer line-height;
 }
 
 span {
-    @mixin txt;
+    @mixin txt-inner font-size;
+    @mixin txt-outer line-height;
 }
 
 p {
-    @mixin txt;
+    @mixin txt-inner font-size;
+    @mixin txt-outer line-height;
 }
 
 .layout > .content {
@@ -49,14 +58,14 @@ p {
 }
 
 input, textarea, button {
-    @mixin h5-font-size;
-    @mixin h4-line-height;
+    @mixin h5-inner font-size;
+    @mixin h4-outer line-height;
     color: var(--base-text-color);
     box-sizing: border-box;
 }
 select {
-    @mixin h5-font-size;
-    @mixin h4-height;
+    @mixin h5-inner font-size;
+    @mixin h4-outer height;
     color: var(--base-text-color);
     box-sizing: border-box;
     appearance: none;
@@ -79,8 +88,8 @@ input, textarea, select {
 }
 input[type="radio"],
 input[type="checkbox"]{
-    @mixin h5-height;
-    @mixin h5-width;
+    @mixin h5-outer height;
+    @mixin h5-outer width;
     appearance: none;
     background-color: var(--base-text-back);
     padding:0;
@@ -107,8 +116,8 @@ input[type="radio"]:checked,
 input[type="checkbox"]:checked{
     background-color: transparent;
     background-repeat: no-repeat;
-    @mixin h5-background-size;
-    @mixin h5-line-height;
+    @mixin h5-size background-size;
+    @mixin h5-outer height;
     background-position: center;
     border: solid 1px transparent;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cpath fill='#19be6b' d='M31.787 103.442c2.756-.117 10.81 6.84 22.959 18.033 9.436 8.695 23.456 32.68 26.29 32.799 2.906.3 13.205-39.723 42.952-87.92C143.968 33.982 166.616.296 171.327.263c3.34-.033 28.46 72.81 28.508 79.661-.024 5.103-23.977 12.177-48.24 35.68-38.87 37.656-63.03 84.273-65.793 84.191-2.105-.13-25.347-23.596-50.782-40.014C22.443 151.662.322 147.162.278 144.411c.086-2.863 9.21-9.99 18.343-21.776 4.884-6.302 10.827-19.026 13.166-19.193z'/%3E%3C/svg%3E");
@@ -145,8 +154,8 @@ input.prefix, input.postfix {
 i.icon.prefix,
 i.icon.postfix {
     position: relative;
-    @mixin h4-line-height;
-    @mixin h5-font-size;
+    @mixin h4-outer line-height;
+    @mixin h5-inner font-size;
 }
 
 i.icon.prefix:before,

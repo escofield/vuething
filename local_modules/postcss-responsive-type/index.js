@@ -110,7 +110,7 @@ module.exports = postcss.plugin('postcss-responsive-type', () => {
           newRules;
 
       rule.walkDecls('responsive', decl => {
-        const cmds = decl.value.split(' ');
+        const cmds = decl.value.split(' ')
         const property = cmds[0]
         let params = {
           minSize: cmds[1],
@@ -118,6 +118,15 @@ module.exports = postcss.plugin('postcss-responsive-type', () => {
           minWidth: cmds[3] || '25rem',
           maxWidth: cmds[4] || '123.75rem'
         }
+        //console.log('\r\n*********\r\n')
+        //console.log(decl.value)
+        //console.log('\r\n*********\r\n')
+        //console.log(cmds)
+        //console.log('\r\n*********\r\n')
+        //console.log(params)
+        //console.log('\r\n*********\r\n')
+        //console.log(decl.value)
+        //console.log('\r\n*********\r\n')
         thisRule = decl.parent; 
         newRules = buildRules(thisRule, property, params, result);
         rule.append({

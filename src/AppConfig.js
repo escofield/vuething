@@ -15,5 +15,5 @@ export const cssVariables = [
   'base-text-dim-color',
   'base-text-back',
   'button-text-color',
-  'shadow-color'
+  'shadow-color',
 ]

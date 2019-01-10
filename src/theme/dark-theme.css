@@ -1,6 +1,6 @@
 /* only to be referenced from variables.css */
 :root{
-    --dk-base-body-color: #303234;
+    --dk-base-body-color: #262729;
     --dk-primary-color: #bb16a3;
     --dk-primary-color-dim: #d6a0ce;
     --dk-info-color: #256eff;
@@ -9,7 +9,7 @@
     --dk-success-color: #19be6b;
     --dk-base-text-color: #c4cbda;
     --dk-base-text-dim-color: #9fa7b9;
-    --dk-base-text-back: #28282e;
+    --dk-base-text-back: #16161a;
     --dk-button-text-color: white;
     --dk-shadow-color: gray;
 
