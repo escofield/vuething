@@ -175,7 +175,7 @@ button {
     border: none;
     transition : all 250ms ease-in;
     color: transparent;
-    padding: 0px 1rem;
+    padding: .2rem 2rem;
 }
 
 button:hover {

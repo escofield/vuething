@@ -90,7 +90,6 @@
   "postcss": {
     "plugins": {
       "autoprefixer": {},
-      "postcss-mixins": {},
       "postcss-responsive-type": {},
       "postcss-preset-env": {
         "features": {
