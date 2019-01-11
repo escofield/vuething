@@ -1,7 +1,5 @@
 
 html {
-    font-size: responsive .75rem 1.5rem;
-    font-range: 25rem 123.75rem;
     color: var(--base-text-color);
     background-color: var(--base-body-color);
 }
@@ -12,44 +10,63 @@ body {
 }
 
 h1 {
-    @mixin h1-inner font-size;
-    @mixin h1-outer line-height;
+    responsive: font-size inset 10;
+    responsive: line-height outset 10;
+    margin: 0;
 }
 
 h2 {
-    @mixin h2-inner font-size;
-    @mixin h2-outer line-height;
+    responsive: font-size inset 20;
+    responsive: line-height outset 20;
+    margin: 0;
 }
 
 h3 {
-    @mixin h3-inner font-size;
-    @mixin h3-outer line-height;
-
+    responsive: font-size inset 30;
+    responsive: line-height outset 30;
+    margin: 0;
 }
 
+
+input,
+textarea,
+button,
+select,
+i.icon.prefix,
+i.icon.postfix
+{
+    responsive: font-size 1.3rem 1.55rem;
+    responsive: line-height 2rem 3rem;
+    responsive: border-radius .5rem .8rem;
+}
+body,
+span,
+p,
 h4 {
-    @mixin h4-inner font-size;
-    @mixin h4-outer line-height;
+    responsive: font-size inset 40;
+    responsive: line-height outset 40;
+    margin: 0;
 }
 
+input[type="radio"],
+input[type="checkbox"]
+{
+    border-radius: .5rem;
+    responsive: height outset 50;
+    responsive: width outset 50;
+    responsive: background-size 1.4rem 1.6rem;
+}
+label,
 h5 {
-    @mixin h5-inner font-size;
-    @mixin h5-outer line-height;
+    responsive: font-size inset 50;
+    responsive: line-height outset 50;
+    margin: 0;
 }
 
 h6 {
-    @mixin h6-inner font-size;
-    @mixin h6-outer line-height;
-}
-
-span {
-    @mixin txt-inner font-size;
-    @mixin txt-outer line-height;
-}
-
-p {
-    @mixin txt-inner font-size;
-    @mixin txt-outer line-height;
+    responsive: font-size inset 60;
+    responsive: line-height outset 60;
+    margin: 0;
 }
 
 .layout > .content {
@@ -57,28 +74,13 @@ p {
     box-sizing: border-box;
 }
 
-input, textarea, button {
-    @mixin h5-inner font-size;
-    @mixin h4-outer line-height;
+input, textarea, button, select {
     color: var(--base-text-color);
     box-sizing: border-box;
-}
-select {
-    @mixin h5-inner font-size;
-    @mixin h4-outer height;
-    color: var(--base-text-color);
-    box-sizing: border-box;
-    appearance: none;
-    background-color: transparent;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512'%3E%3Cpath fill='#515a6e' d='M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z'/%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-size: 1.5EM 1EM;
-    background-position: right center;
 }
 
 input, textarea, select {
     background-color: var(--base-text-back);
-    border-radius: var(--base-text-border-radius);
     padding: 0 1rem;
     outline: none;
     width: 100%;
@@ -86,10 +88,18 @@ input, textarea, select {
     border: solid 1px var(--base-text-back);;
     transition : border 500ms ease-out;
 }
+
+select {
+    responsive: padding-right 2rem 3rem;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512'%3E%3Cpath fill='#515a6e' d='M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: 1.5EM 1EM;
+    background-position: right center;
+}
+
 input[type="radio"],
 input[type="checkbox"]{
-    @mixin h5-outer height;
-    @mixin h5-outer width;
     appearance: none;
     background-color: var(--base-text-back);
     padding:0;
@@ -98,39 +108,24 @@ input[type="checkbox"]{
 input[type="radio"]{
     border-radius: 50%;
 }
-input[type="radio"]:hover,
-input[type="checkbox"]:hover{
-    cursor:pointer;
-}
 
-input:hover, textarea:hover, select:hover {
-    border: solid 1px var(--primary-color-dim); ;
-}
-select:hover{
-    cursor: pointer;
-}
-input:focus, textarea:focus, select:focus {
-    border: solid 1px var(--primary-color);;
-}
 input[type="radio"]:checked,
 input[type="checkbox"]:checked{
     background-color: transparent;
     background-repeat: no-repeat;
-    @mixin h5-size background-size;
-    @mixin h5-outer height;
     background-position: center;
+}
+input[type="checkbox"]:checked {
     border: solid 1px transparent;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cpath fill='#19be6b' d='M31.787 103.442c2.756-.117 10.81 6.84 22.959 18.033 9.436 8.695 23.456 32.68 26.29 32.799 2.906.3 13.205-39.723 42.952-87.92C143.968 33.982 166.616.296 171.327.263c3.34-.033 28.46 72.81 28.508 79.661-.024 5.103-23.977 12.177-48.24 35.68-38.87 37.656-63.03 84.273-65.793 84.191-2.105-.13-25.347-23.596-50.782-40.014C22.443 151.662.322 147.162.278 144.411c.086-2.863 9.21-9.99 18.343-21.776 4.884-6.302 10.827-19.026 13.166-19.193z'/%3E%3C/svg%3E");
 }
 input[type="radio"]:checked{
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cpath fill='#19be6b' d='M100 25.002a75 75 0 0 0-75 75 75 75 0 0 0 75 75 75 75 0 0 0 75-75 75 75 0 0 0-75-75zm12.353 15.463c22.307 4.943 45.506 20.39 50.265 63.641 0 0-18.441-35.219-24.39-32.747 7.734 13.593 7.734 32.129 7.734 32.129-7.733-32.129-43.425-47.576-43.425-47.576s21.712-.618 28.256 7.414c2.38-6.487-18.44-22.86-18.44-22.86z'/%3E%3C/svg%3E");
-    border: solid 1px var(--base-text-dim-color);
 }
 
 input[type="checkbox"]:disabled:after{
     filter: opacity(0.4);
 }
-
 
 label {
     color: var(--base-text-dim-color);
@@ -154,8 +149,6 @@ input.prefix, input.postfix {
 i.icon.prefix,
 i.icon.postfix {
     position: relative;
-    @mixin h4-outer line-height;
-    @mixin h5-inner font-size;
 }
 
 i.icon.prefix:before,
@@ -164,30 +157,28 @@ i.icon.postfix:before {
     padding-top:1px;
 }
 i.icon.prefix:before {
-    padding-left: .5rem;
+    responsive: padding-left .5rem .8rem;
 }
 i.icon.postfix:before {
     right: 0px;
-    padding-right: 1rem;
+    responsive: padding-right 1rem 1.5rem;
 }
 input.postfix{
-    padding-right: 2rem;
+    responsive: padding-right 2.2rem 3rem;
 }
 input.prefix{
-    padding-left: 2rem;
+    responsive: padding-left 2rem 3rem;
 }
 
 button {
     background-color: transparent;
     border: none;
     transition : all 250ms ease-in;
-    border-radius: .5rem;
     color: transparent;
     padding: 0px 1rem;
 }
 
 button:hover {
-    cursor: pointer;
     filter: brightness(115%) drop-shadow(0px 1px 1px var(--shadow-color));
     transform: translate(0,-2px);
 }
@@ -226,4 +217,25 @@ button.success {
 button.primary {
     background-color: var(--primary-color);
     color: var(--button-text-color);
+}
+
+
+button,
+select:hover,
+input[type="radio"]:hover,
+input[type="checkbox"]:hover{
+    cursor:pointer;
+}
+
+input:hover,
+textarea:hover,
+select:hover,
+input[type="checkbox"]:checked:hover{
+    border: solid 1px var(--primary-color-dim); ;
+}
+
+input:focus, 
+textarea:focus, 
+select:focus{
+    border: solid 1px var(--primary-color);;
 }

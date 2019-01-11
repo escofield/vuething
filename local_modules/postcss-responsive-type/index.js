@@ -5,6 +5,32 @@ const postcss = require('postcss');
 // Assign default root size
 let rootSize = '16px';
 
+// min modular scale minor second
+// max >=40 modular scale minor second
+// max > 40 modular scale minor third
+
+let outset = {
+  10: {min: '3rem', max: '6rem'},
+  20: {min: '2.4rem', max: '4.5rem'},
+  30: {min: '2rem', max: '4rem'},
+  40: {min: '1.7rem', max: '2rem'},
+  50: {min: '1.5rem', max: '1.7rem'},
+  60: {min: '1.3rem', max: '1.5rem'},
+}
+
+// min modular scale minor second
+// max >=40 modular scale minor second
+// max > 40 modular scale minor third
+let inset = {
+  10: {min: '1.383rem', max: '3.24rem'},
+  20: {min: '1.296rem', max: '2.592rem'},
+  30: {min: '1.215rem', max: '2.074rem'},
+  40: {min: '1.138rem', max: '1.383rem'},
+  50: {min: '1.067rem', max: '1.296rem'},
+  60: {min: '1rem', max: '1.215rem'},
+}
+
+
 /**
  * Extract the unit from a string
  * @param  {String} value value to extract unit from
@@ -68,7 +94,7 @@ function buildRules(rule, propName, params, result) {
   sizeDiff = parseFloat(maxSize) - parseFloat(minSize);
   rangeDiff = parseFloat(maxWidth) - parseFloat(minWidth);
 
-  rules.responsive = 'calc(' + minSize + ' + ' + sizeDiff + ' * ((100vw - ' + minWidth + ') / ' + rangeDiff + '))';
+  rules.responsive = 'calc(' + sizeDiff + ' * ((100vw - ' + minWidth + ') / ' + rangeDiff + ') + ' + minSize + ')';
 
   // Build the media queries
   rules.minMedia = postcss.atRule({
@@ -112,21 +138,23 @@ module.exports = postcss.plugin('postcss-responsive-type', () => {
       rule.walkDecls('responsive', decl => {
         const cmds = decl.value.split(' ')
         const property = cmds[0]
-        let params = {
-          minSize: cmds[1],
-          maxSize: cmds[2],
-          minWidth: cmds[3] || '25rem',
-          maxWidth: cmds[4] || '123.75rem'
+        let params = {}
+        if(cmds[1].localeCompare('inset') == 0){
+          params.minSize = inset[cmds[2]].min
+          params.maxSize = inset[cmds[2]].max
+        }else if(cmds[1].localeCompare('outset') == 0){
+          params.minSize = outset[cmds[2]].min
+          params.maxSize = outset[cmds[2]].max
+        }else{
+          params.minSize = cmds[1]
+          params.maxSize = cmds[2]
         }
-        //console.log('\r\n*********\r\n')
-        //console.log(decl.value)
-        //console.log('\r\n*********\r\n')
-        //console.log(cmds)
-        //console.log('\r\n*********\r\n')
+        params.minWidth = cmds[3] || '27rem',
+        params.maxWidth = cmds[4] || '120rem'
+
+        //console.log(`\r\n****( ${decl.value} ) ****\r\n${decl.parent.selector}\r\n*****`)
         //console.log(params)
-        //console.log('\r\n*********\r\n')
-        //console.log(decl.value)
-        //console.log('\r\n*********\r\n')
+        //console.log('*********')
         thisRule = decl.parent; 
         newRules = buildRules(thisRule, property, params, result);
         rule.append({
