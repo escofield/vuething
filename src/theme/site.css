@@ -51,11 +51,63 @@ h4 {
 input[type="radio"],
 input[type="checkbox"]
 {
-    border-radius: .5rem;
     responsive: height outset 50;
     responsive: width outset 50;
-    responsive: background-size 1.4rem 1.6rem;
+    responsive: line-height outset 50;
+    appearance: none;
+    padding: 0;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
 }
+input[type="checkbox"]{
+    border-radius: .5rem;
+    background-color: var(--primary-color);
+    border:solid 1px var(--primary-color);
+    
+}
+input[type="checkbox"] + label{
+    display: inline-block;
+    responsive: line-height outset 50;
+    margin: 0;
+    position: relative;
+    top:0;
+    vertical-align: middle;
+}
+input[type="radio"]{
+    border-radius: 50%;
+    background-color: var(--base-body-color);
+    border:solid 2px var(--primary-color);
+}
+input[type="radio"]:checked{
+    border:solid 1px var(--primary-color);
+}
+input[type="radio"]:checked:after{
+    content: '';
+    responsive: width inset 60;
+    responsive: height inset 60;
+    background-color: var(--primary-color);
+    display: block;
+    border-radius: 50%;
+    position: absolute;
+    top:0; left: 0; right: 0; bottom: 0;
+    margin:auto;
+}
+input[type="checkbox"]:checked:after
+{
+    content: '\f102';
+    responsive: line-height outset 50;
+    color: var(--button-text-color);
+    font-family: icons;
+    text-align: center;
+    vertical-align: middle;
+    display: inline-block;
+    position: absolute;
+    margin: auto;
+    padding: 0;
+    top: 0; left: 0; bottom: 0; right: 0;
+}
+
 label,
 h5 {
     responsive: font-size inset 50;
@@ -96,35 +148,6 @@ select {
     background-repeat: no-repeat;
     background-size: 1.5EM 1EM;
     background-position: right center;
-}
-
-input[type="radio"],
-input[type="checkbox"]{
-    appearance: none;
-    background-color: var(--base-text-back);
-    padding:0;
-    border: solid 1px var(--base-text-dim-color);
-}
-input[type="radio"]{
-    border-radius: 50%;
-}
-
-input[type="radio"]:checked,
-input[type="checkbox"]:checked{
-    background-color: transparent;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-input[type="checkbox"]:checked {
-    border: solid 1px transparent;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cpath fill='#19be6b' d='M31.787 103.442c2.756-.117 10.81 6.84 22.959 18.033 9.436 8.695 23.456 32.68 26.29 32.799 2.906.3 13.205-39.723 42.952-87.92C143.968 33.982 166.616.296 171.327.263c3.34-.033 28.46 72.81 28.508 79.661-.024 5.103-23.977 12.177-48.24 35.68-38.87 37.656-63.03 84.273-65.793 84.191-2.105-.13-25.347-23.596-50.782-40.014C22.443 151.662.322 147.162.278 144.411c.086-2.863 9.21-9.99 18.343-21.776 4.884-6.302 10.827-19.026 13.166-19.193z'/%3E%3C/svg%3E");
-}
-input[type="radio"]:checked{
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cpath fill='#19be6b' d='M100 25.002a75 75 0 0 0-75 75 75 75 0 0 0 75 75 75 75 0 0 0 75-75 75 75 0 0 0-75-75zm12.353 15.463c22.307 4.943 45.506 20.39 50.265 63.641 0 0-18.441-35.219-24.39-32.747 7.734 13.593 7.734 32.129 7.734 32.129-7.733-32.129-43.425-47.576-43.425-47.576s21.712-.618 28.256 7.414c2.38-6.487-18.44-22.86-18.44-22.86z'/%3E%3C/svg%3E");
-}
-
-input[type="checkbox"]:disabled:after{
-    filter: opacity(0.4);
 }
 
 label {
@@ -219,7 +242,6 @@ button.primary {
     color: var(--button-text-color);
 }
 
-
 button,
 select:hover,
 input[type="radio"]:hover,
@@ -229,13 +251,36 @@ input[type="checkbox"]:hover{
 
 input:hover,
 textarea:hover,
-select:hover,
-input[type="checkbox"]:checked:hover{
-    border: solid 1px var(--primary-color-dim); ;
+select:hover {
+    border: solid 1px var(--primary-color-dim);
 }
 
 input:focus, 
 textarea:focus, 
 select:focus{
-    border: solid 1px var(--primary-color);;
+    border: solid 1px var(--primary-color);
+}
+
+.badge{
+    position: relative;
+}
+.badge[count]:after {
+    background: red;
+    border-radius: .7em;
+    color: #fff;
+    content: attr(count);
+    responsive: font-size inset 60;
+    responsive: line-height outset 60;
+    min-width: 20px;
+    padding: 0px .2em;
+    position: absolute;
+    top: -1em;
+    right: -1em;
+    text-align: center;
+}
+
+.badge[count^="-"]:after,
+.badge[count="0"]:after,
+.badge[count=""]:after {
+ display: none;
 }

@@ -48,15 +48,22 @@ export default Stylish
     option The second option
     option The third option
   
+  input(type="checkbox" name="chk1") 
   label(for="chk1") Checkbox 1
-  input(type="checkbox" name="chk1")
 
   input(type="radio" name="radioTest" value='1') 
   | option 1
   input(type="radio" name="radioTest" value='2') 
   | option 2
+  span.badge(count="5") f
 </template>
 <style lang="postcss" scoped>
-.stylish {
-}
+  span.badge {
+    height: 2rem;
+    width: 2rem;
+    display: block;
+    margin-top: 2rem;
+    border-radius: 0.7 rem;
+    background-color: blue;
+  }
 </style>
