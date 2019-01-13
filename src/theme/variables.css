@@ -1,8 +1,10 @@
 
 :root {
   --base-body-color: var(--lt-base-body-color);
+  --panel-color: var(--lt-panel-color);
   --primary-color: var(--lt-primary-color);
   --primary-color-dim: var(--lt-primary-color-dim);
+  --primary-color-dark: var(--lt-primary-color-dark);
   --base-text-color: var(--lt-base-text-color);
   --base-text-back: var(--lt-base-text-back);
   --base-text-dim-color:  var(--lt-base-text-dim-color);
@@ -11,7 +13,17 @@
   --error-color: var(--lt-error-color);
   --success-color: var(--lt-success-color);
   --button-text-color: var(--lt-button-text-color);
-  --shadow-color: var(--lt-shadow-color);
+  --button-shadow-color: var(--lt-button-shadow-color);
+  --panel-shadow-color: var(--lt-panel-shadow-color);
+  --chip-back-color: var(--lt-chip-back-color);
+  --chip-text-color: var(--lt-chip-text-color);
+  --control-fill-color: var(--lt-control-fill-color);
+  --control-alt-fill-color: var(--lt-control-alt-fill-color);
+  --control-on-fill-color: var(--lt-control-on-fill-color);
+  --control-text-color: var(--lt-control-text-color);
+  --control-text-dim-color: var(--lt-control-text-dim-color);
+  --control-alt-text-color: var(--lt-control-alt-text-color);
+
   --sider-width: 10rem;
   --header-height: 5rem;
   --footer-height: 1.5rem;

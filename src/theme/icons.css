@@ -1,6 +1,6 @@
 @font-face {
 	font-family: "icons";
-	src: url("./fonts/icons.woff2?733cd581814ce367c0bb085105848b89") format("woff2");
+	src: url("./fonts/icons.woff2?39581fa2a5f8ece5961234b4df11b8c0") format("woff2");
 }
 
 .icon {
@@ -20,12 +20,15 @@
 .icon-check:before {
 	content: "\f102";
 }
-.icon-home:before {
+.icon-close:before {
 	content: "\f103";
 }
-.icon-homeOutline:before {
+.icon-home:before {
 	content: "\f104";
 }
-.icon-radio:before {
+.icon-homeOutline:before {
 	content: "\f105";
+}
+.icon-radio:before {
+	content: "\f106";
 }

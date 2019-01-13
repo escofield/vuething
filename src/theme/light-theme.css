@@ -1,8 +1,10 @@
 /* only to be referenced from variables.css */
 :root{
-    --lt-base-body-color: #fff;
+    --lt-base-body-color: rgb(185, 185, 185);
+    --lt-panel-color: #fff;
     --lt-primary-color: #bb16a3;
-    --lt-primary-color-dim: #d6a0ce;
+    --lt-primary-color-dim: #fdbff4;
+    --lt-primary-color-dark: #3d0134;
     --lt-info-color: #256eff;
     --lt-warning-color: #f90;
     --lt-error-color: #d32929;
@@ -11,5 +13,14 @@
     --lt-base-text-dim-color: #9fa7b9;
     --lt-base-text-back: #f5f5f5;
     --lt-button-text-color: white;
-    --lt-shadow-color: gray;
+    --lt-button-shadow-color: rgba(0,0,0,.5);
+    --lt-panel-shadow-color: rgba(0,0,0,.12);
+    --lt-chip-back-color: #f5f5f5;
+    --lt-chip-text-color: #515a6e;
+    --lt-control-fill-color: #878b94;
+    --lt-control-alt-fill-color: #e7e8eb;
+    --lt-control-on-fill-color: #bb16a3;
+    --lt-control-text-color: #515a6e;
+    --lt-control-alt-text-color: #fafafa;
+    --lt-control-text-dim-color: #333333;
 }

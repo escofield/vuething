@@ -13,8 +13,10 @@ export default {
     dark: function(newValue) {
       const theme = newValue ? 'dk' : 'lt'
       const html = document.querySelector(':root')
-      cssVariables.forEach(v => {
-        html.style.setProperty(`--${v}`, `var(--${theme}-${v})`)
+      const style = getComputedStyle(document.body)
+      cssVariables.forEach(name => {
+        const value = style.getPropertyValue(`--${theme}-${name}`)
+        html.style.setProperty(`--${name}`, value)
       })
     },
   },

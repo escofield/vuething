@@ -1,16 +1,26 @@
 /* only to be referenced from variables.css */
 :root{
-    --dk-base-body-color: #262729;
+    --dk-base-body-color: #000000;
+    --dk-panel-color: #262729;
     --dk-primary-color: #bb16a3;
     --dk-primary-color-dim: #d6a0ce;
+    --dk-primary-color-dark: #3d0134;
     --dk-info-color: #256eff;
     --dk-warning-color: #f90;
     --dk-error-color: #d32929;
     --dk-success-color: #19be6b;
     --dk-base-text-color: #c4cbda;
-    --dk-base-text-dim-color: #9fa7b9;
+    --dk-base-text-dim-color: #6b6b6b;
     --dk-base-text-back: #16161a;
     --dk-button-text-color: white;
-    --dk-shadow-color: gray;
-
+    --dk-button-shadow-color: rgba(0,0,0,.4);
+    --dk-panel-shadow-color: rgba(0,0,0,.12);
+    --dk-chip-back-color: #9fa7b9;
+    --dk-chip-text-color: #262729;
+    --dk-control-fill-color: #262729;
+    --dk-control-alt-fill-color: #6b6b6b;
+    --dk-control-on-fill-color: #bb16a3;
+    --dk-control-text-color: #515a6e;
+    --lt-control-alt-text-color: #515a6e;
+    --dk-control-text-dim-color: #9fa7b9;
 }
