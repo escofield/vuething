@@ -225,9 +225,14 @@ button {
 button:not(:last-child){
     margin-right: 2rem;
 }
-button:hover {
-    filter: brightness(115%) drop-shadow(0px 2px 3px var(--button-shadow-color));
-    transform: scale(1.1);
+button.primary:hover,
+button.success:hover,
+button.info:hover,
+button.warning:hover,
+button.error:hover {
+    /* filter: brightness(115%) drop-shadow(0px 2px 0px var(--button-shadow-color));
+    transform: scale(1.03) translate(0,-2px); */
+    filter: brightness(115%);
     transition : all 100ms ease-in;
 }
 button.text{ 
@@ -235,17 +240,19 @@ button.text{
 }
 button.text:hover {
     filter: brightness(115%);
+    /* transform: translate(0,-2px); */
     color: var(--primary-color);
     transition : all 100ms ease-in;
 }
 button.default{ 
     border: solid 1px var(--base-text-dim-color);
-    filter: brightness(115%);
     color: var(--base-text-color);
 }
 button.default:hover {
+    filter: brightness(115%);
     border: solid 1px var(--primary-color);
     color: var(--primary-color);
+    /* transform: translate(0,-2px); */
 }
 button.error {
     background-color: var(--error-color);
@@ -276,7 +283,7 @@ a{
 
 a:hover{
     filter: brightness(115%);
-    transform: scale(1.05);
+    /* transform: scale(1.02); */
     transition : all 50ms linear;
 }
 
@@ -532,7 +539,7 @@ input[type=range]:focus::-ms-fill-upper {
 
 .chip > .close:hover:after{
     cursor: pointer;
-    transform: scale(1.2);
+    /* transform: scale(1.2); */
     transition: all 100ms ease-in;
 }
 
