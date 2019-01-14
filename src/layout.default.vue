@@ -5,12 +5,12 @@ export default {
 </script>
 <template lang="pug">
 .app
-  .public.layout
-    .header
+  .layout
+    header
       public-header
-    .content
+    main
       router-view
-    .footer
+    footer
       site-footer
 </template>
 <style lang="postcss" scoped>

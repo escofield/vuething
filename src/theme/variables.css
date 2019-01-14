@@ -23,7 +23,8 @@
   --control-text-color: var(--lt-control-text-color);
   --control-text-dim-color: var(--lt-control-text-dim-color);
   --control-alt-text-color: var(--lt-control-alt-text-color);
-
+  --mask-color: var(--lt-mask-color);
+  
   --sider-width: 10rem;
   --header-height: 5rem;
   --footer-height: 1.5rem;

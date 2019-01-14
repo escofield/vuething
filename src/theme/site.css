@@ -142,7 +142,7 @@ input[type=checkbox]::-ms-check {
     color: var(--button-text-color);
 }
 
-.layout > .content {
+.layout > main {
     responsive: padding content 10;
     box-sizing: border-box;
 }
@@ -537,23 +537,24 @@ input[type=range]:focus::-ms-fill-upper {
 }
 
 .chip > .close:after {
-    display: inline;
+    display: inline-block;
     content: '\f103';
     font-family: icons;
     position:relative;
     top: .15em;
     right: -.6em;
     transition : all 200ms ease-in;
+
 }
 
 input[accordian]{
     display: none;
 }
-div[accordian]{
+section[accordian]{
     max-height: 0rem;
     overflow: hidden;
     transition : all 1s ease-in-out;
-    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 2px 0 var(--panel-shadow-color), 0 1px 5px 0 var(--panel-shadow-color), 0 3px 1px -2px var(--panel-shadow-color);
 }
 input[accordian] + label{
     display: block;
@@ -571,7 +572,6 @@ input[accordian] + label{
     font-weight: bold;
     transition : all 200ms ease-in;
     background: radial-gradient(ellipse at left bottom, var(--primary-color-dark) -40%,var(--primary-color) 65%);
-
 }
 
 input[accordian] + label:hover{
@@ -606,7 +606,31 @@ input[type="radio"][accordian]:checked + label:after{
 input[accordian]:checked + label:after{
     transform: rotate(180deg);
 }
-input[accordian]:checked ~ div[accordian] {
+input[accordian]:checked ~ section[accordian] {
     max-height: 100rem;
     transition : all 5s ease-out;
+}
+
+.modal{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    height: 100vh;
+    widows: 100vh;
+    background-color: var(--mask-color);
+}
+
+.modal > section {
+    background-color: white;
+    width: 80vh;
+    margin: auto;
+    margin-top: 3rem;
+    border-radius: 1rem;
+}
+.modal[open] {
+    display: block;
 }

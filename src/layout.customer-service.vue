@@ -46,11 +46,11 @@ export default {
 .app
   idle-display(:notifyIdle="idleOut" v-if="isAppIdle" @iAmAlive="iAmAlive")
   .customer-support.layout
-    .header
-    .sider
-    .content
+    header
+    aside
+    main
       router-view
-    .footer
+    footer
       site-footer
 </template>
 <style scoped>

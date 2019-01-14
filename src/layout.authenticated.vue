@@ -45,14 +45,14 @@ export default {
 .app
   idle-display(:notifyIdle="idleOut" v-if="isAppIdle" @iAmAlive="iAmAlive")
   .authenticated
-    .aside
+    aside
       authenticated-sider
-    .main.layout
-      .header
+    .layout
+      header
         authenticated-header
-      .content
+      main
         router-view
-      .footer
+      footer
         site-footer
 </template>
 
@@ -65,7 +65,7 @@ export default {
   overflow: auto;
 }
 
-.aside {
+aside {
   background-color: blue;
   width: 0px;
   height: 100vh;
@@ -78,7 +78,7 @@ export default {
 }
 
 @media screen and (min-width: 1024px) {
-  .aside {
+  aside {
     width: var(--sider-width);
   }
 }

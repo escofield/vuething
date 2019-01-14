@@ -7,6 +7,7 @@ let Stylish = {
   data() {
     return {
       msg: 'some data',
+      showModal: false,
     }
   },
 }
@@ -114,27 +115,31 @@ export default Stylish
       .accordian
         input(type="radio" accordian name="accGroup1" id="panel1")
         label(for="panel1") Panel 1
-        div(accordian)
-          .accordian-content
-            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto possimus at a cum saepe molestias modi illo facere ducimus voluptatibus praesentium deleniti fugiat ab error quia sit perspiciatis velit necessitatibus.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet.
+        section(accordian)
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto possimus at a cum saepe molestias modi illo facere ducimus voluptatibus praesentium deleniti fugiat ab error quia sit perspiciatis velit necessitatibus.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet.
       .accordian
         input(type="radio" accordian name="accGroup1" id="panel2")
         label(for="panel2") Panel 1
-        div(accordian)
-          .accordian-content
-            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto possimus at a cum saepe molestias modi illo facere ducimus voluptatibus praesentium deleniti fugiat ab error quia sit perspiciatis velit necessitatibus.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet.
+        section(accordian)
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto possimus at a cum saepe molestias modi illo facere ducimus voluptatibus praesentium deleniti fugiat ab error quia sit perspiciatis velit necessitatibus.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet.
       .accordian
         input(type="radio" accordian name="accGroup1" id="panel3")
         label(for="panel3") Panel 1
-        div(accordian)
-          .accordian-content
-            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto possimus at a cum saepe molestias modi illo facere ducimus voluptatibus praesentium deleniti fugiat ab error quia sit perspiciatis velit necessitatibus.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet.
+        section(accordian)
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto possimus at a cum saepe molestias modi illo facere ducimus voluptatibus praesentium deleniti fugiat ab error quia sit perspiciatis velit necessitatibus.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet.
   .panel
     h1 Modal
+      button.primary(@click="showModal=!showModal") Open
+      .modal(:open="showModal" @click="showModal=!showModal")
+        section(@click.stop)
+            h1 Hey modal
+            main
+            nav
+              button.primary(@click="showModal=!showModal") Close
 
   .panel
     h1 Toast
-
+      button.primary(@click="show")
   .panel
     h1 Alert
 

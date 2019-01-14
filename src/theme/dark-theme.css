@@ -21,6 +21,7 @@
     --dk-control-alt-fill-color: #6b6b6b;
     --dk-control-on-fill-color: #bb16a3;
     --dk-control-text-color: #515a6e;
-    --lt-control-alt-text-color: #515a6e;
+    --dk-control-alt-text-color: #515a6e;
     --dk-control-text-dim-color: #9fa7b9;
+    --dk-mask-color: rgba(0,0,0,.32);
 }
