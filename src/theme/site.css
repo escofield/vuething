@@ -225,54 +225,58 @@ button {
 button:not(:last-child){
     margin-right: 2rem;
 }
-button.primary:hover,
-button.success:hover,
-button.info:hover,
-button.warning:hover,
-button.error:hover {
+button.btn-primary:hover,
+button.btn-success:hover,
+button.btn-info:hover,
+button.btn-warning:hover,
+button.btn-error:hover {
     /* filter: brightness(115%) drop-shadow(0px 2px 0px var(--button-shadow-color));
     transform: scale(1.03) translate(0,-2px); */
     filter: brightness(115%);
     transition : all 100ms ease-in;
 }
-button.text{ 
+button.btn-text{ 
     color: var(--base-text-color);
 }
-button.text:hover {
+button.btn-text:hover {
     filter: brightness(115%);
     /* transform: translate(0,-2px); */
     color: var(--primary-color);
     transition : all 100ms ease-in;
 }
-button.default{ 
+button.btn-default{ 
     border: solid 1px var(--base-text-dim-color);
     color: var(--base-text-color);
 }
-button.default:hover {
+button.btn-default:hover {
     filter: brightness(115%);
     border: solid 1px var(--primary-color);
     color: var(--primary-color);
     /* transform: translate(0,-2px); */
 }
-button.error {
+button.btn-error {
     background-color: var(--error-color);
     color: var(--button-text-color);
 }
-button.warning {
+button.btn-warning {
     background-color: var(--warning-color);
     color: var(--button-text-color);
 }
-button.info {
+button.btn-info {
     background-color: var(--info-color);
     color: var(--button-text-color);
 }
-button.success {
+button.btn-success {
     background-color: var(--success-color);
     color: var(--button-text-color);
 }
-button.primary {
+button.btn-primary {
     background-color: var(--primary-color);
     color: var(--button-text-color);
+}
+
+button:focus{
+    outline: none;
 }
 
 a:visited,
