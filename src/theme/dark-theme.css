@@ -24,4 +24,5 @@
     --dk-control-alt-text-color: #515a6e;
     --dk-control-text-dim-color: #9fa7b9;
     --dk-mask-color: rgba(0,0,0,.32);
+    --dk-loading-mask-color: rgba(38, 39, 41,.72);
 }

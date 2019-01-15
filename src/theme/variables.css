@@ -24,6 +24,7 @@
   --control-text-dim-color: var(--lt-control-text-dim-color);
   --control-alt-text-color: var(--lt-control-alt-text-color);
   --mask-color: var(--lt-mask-color);
+  --loading-mask-color: var(--lt-loading-mask-color);
   
   --sider-width: 10rem;
   --header-height: 5rem;

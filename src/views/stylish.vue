@@ -8,7 +8,14 @@ let Stylish = {
     return {
       msg: 'some data',
       showModal: false,
+      loading: false,
+      phoneNo: '3211231324',
     }
+  },
+  methods: {
+    show() {
+      alert('not implemented')
+    },
   },
 }
 VueTidyRoutes.route(`/:locale(\\w\\w)?/stylish`, {
@@ -20,6 +27,7 @@ export default Stylish
 </script>
 <template lang="pug">
 .stylish
+  router-link(:to="{ name:'default' }") away
   .panel
     h1 Fonts
     label H1
@@ -145,8 +153,20 @@ export default Stylish
 
   .panel
     h1 Phone number
+    input(v-model='phoneNo' v-phone-number="phoneNo")
+    br
+    | {{ phoneNo }}
+    br
+    | filltered phone {{ phoneNo | phone }}
+  .panel
+    h1 Password
 
-
+  .panel.loading-container
+    h1 Loading
+    button.primary(@click="loading=!loading")  loading toggle
+    .loading(v-if="loading")
+      .loading-mask
+        .spinner
 
 </template>
 <style lang="postcss" scoped>
@@ -169,5 +189,9 @@ span.badge {
 
 .accordian-content {
   padding: 1.5em;
+}
+
+.parent {
+  position: relative;
 }
 </style>

@@ -26,4 +26,5 @@ export const cssVariables = [
   'control-text-color',
   'control-text-dim-color',
   'control-alt-text-color',
+  'loading-mask-color',
 ]

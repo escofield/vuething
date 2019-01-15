@@ -24,4 +24,5 @@
     --lt-control-alt-text-color: #fafafa;
     --lt-control-text-dim-color: #333333;
     --lt-mask-color: rgba(0,0,0,.72);
+    --lt-loading-mask-color: rgba(255,255,255,.72);
 }
