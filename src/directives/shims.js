@@ -81,9 +81,9 @@ Vue.directive('badge-shim', {
     el.setAttribute('count', vnode.context.$data[binding.expression])
   },
 })
- 
+
 Vue.directive('tip-shim', {
-  update: function(el, binding, vnode) {
+  update: function(el) {
     if (el.className.indexOf('tooltip') < 0) {
       el.className = (el.className + ' tooltip').trim()
     }
@@ -91,7 +91,7 @@ Vue.directive('tip-shim', {
 })
 
 Vue.directive('toggle-shim', {
-  update: function(el, binding, vnode) {
+  update: function(el) {
     if (el.className.indexOf('toggle') < 0) {
       el.className = (el.className + ' toggle').trim()
     }
@@ -99,11 +99,11 @@ Vue.directive('toggle-shim', {
 })
 
 Vue.directive('chip-shim', {
-  update: function(el, binding, vnode) {
+  update: function(el, binding) {
     if (el.className.indexOf('chip') < 0) {
       el.className = (el.className + ' chip').trim()
     }
-    if(binding.modifiers.close && el.querySelectorAll('.close').length == 0){
+    if (binding.modifiers.close && el.querySelectorAll('.close').length == 0) {
       const i = document.createElement('DIV')
       i.className = `close`
       el.appendChild(i)
@@ -113,14 +113,15 @@ Vue.directive('chip-shim', {
 
 Vue.directive('button-shim', {
   update: function(el, binding, vnode) {
-    const btn = binding.modifiers.primary && 'primary' ||
-                binding.modifiers.success && 'success' ||
-                binding.modifiers.info && 'info' ||
-                binding.modifiers.warning && 'warning' ||
-                binding.modifiers.error && 'error' ||
-                binding.modifiers.text && 'text' ||
-                binding.modifiers.default && 'default' || 
-                vnode.context.$data[binding.expression]
+    const btn =
+      (binding.modifiers.primary && 'primary') ||
+      (binding.modifiers.success && 'success') ||
+      (binding.modifiers.info && 'info') ||
+      (binding.modifiers.warning && 'warning') ||
+      (binding.modifiers.error && 'error') ||
+      (binding.modifiers.text && 'text') ||
+      (binding.modifiers.default && 'default') ||
+      vnode.context.$data[binding.expression]
 
     if (el.className.indexOf('btn-') < 0) {
       el.className = (el.className + ` btn-${btn}`).trim()
@@ -128,9 +129,8 @@ Vue.directive('button-shim', {
   },
 })
 
-
 Vue.directive('label-shim', {
-  update: function(el, binding, vnode) {
+  update: function(el, binding) {
     if (el.className.indexOf('lbl-') < 0 && binding.modifiers.required) {
       el.className = (el.className + ` required`).trim()
     }
@@ -138,11 +138,11 @@ Vue.directive('label-shim', {
 })
 
 Vue.directive('panel-shim', {
-  update: function(el, binding, vnode) {
+  update: function(el) {
     if (el.className.indexOf('panel') < 0) {
       el.className = (el.className + ` panel`).trim()
     }
-    if (el.hasAttribute('title')){
+    if (el.hasAttribute('title')) {
       const h = document.createElement('H1')
       const i = document.createTextNode(el.getAttribute('title'))
       el.removeAttribute('title')

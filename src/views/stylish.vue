@@ -12,7 +12,7 @@ let Stylish = {
       phoneNo: '3211231324',
       iconHome: ['icon', 'icon-home'],
       badgeCount: 5,
-      btnSuccess: 'success'
+      btnSuccess: 'success',
     }
   },
   methods: {
@@ -138,7 +138,7 @@ export default Stylish
   div(v-panel-shim title="Alert")
 
   div(v-panel-shim title="Phone number")
-    input(v-model='phoneNo' v-phone-number="phoneNo")
+    input(v-phone-number="phoneNo" v-model='phoneNo')
     br
     | {{ phoneNo }}
     br
