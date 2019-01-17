@@ -31,7 +31,7 @@ export default Stylish
 <template lang="pug">
 .stylish
   router-link(:to="{ name:'default' }") away
-  div(v-panel-shim title="Fonts")
+  div(v-p:panel title="Fonts")
     label H1
     h1   Responsive Type
     label H2
@@ -47,110 +47,106 @@ export default Stylish
     label H6
     h6   Responsive Type
 
-  div(v-panel-shim title="Inputs")
-    label(v-label-shim.required for="iname") Input label
+  div(v-p:panel title="Inputs")
+    label(v-p:label.required for="iname") Input label
     input(name="iname" value="some text")
 
     label(for="iname") Input label
-    input(name="iname" value="some text" v-prefix-shim="iconHome" v-postfix-shim:icon.icon-homeOutline)
+    input(name="iname" value="some text" v-p:prefix="iconHome" v-p:postfix.icon.icon-homeOutline)
 
-  div(v-panel-shim title="Buttons")
+  div(v-p:panel title="Buttons")
     p.btns
-      button(v-button-shim.primary) primary
-      button(v-button-shim="btnSuccess") success
-      button(v-button-shim.info) info
-      button(v-button-shim.warning) warning
-      button(v-button-shim.error) error
-      button(v-button-shim.text) text
-      button(v-button-shim.default) default
+      button(v-p:button.primary) primary
+      button(v-p:button="btnSuccess") success
+      button(v-p:button.info) info
+      button(v-p:button.warning) warning
+      button(v-p:button.error) error
+      button(v-p:button.text) text
+      button(v-p:button.default) default
 
-  div(v-panel-shim title="Select")
+  div(v-p:panel title="Select")
     select
       option Here is the styled select box
       option The second option
       option The third option
 
-  div(v-panel-shim title="Checkbox")
+  div(v-p:panel title="Checkbox")
     input(type="checkbox" name="chk1") 
     label(for="chk1") Checkbox 1
 
-  div(v-panel-shim title="Radio Buttons")
+  div(v-p:panel title="Radio Buttons")
     input(type="radio" name="radioTest" value='1') 
     | option 1
     input(type="radio" name="radioTest" value='2') 
     | option 2
   
-  div(v-panel-shim title="Badge")
-    span(v-badge-shim="badgeCount")
+  div(v-p:panel title="Badge")
+    span(v-p:badge="badgeCount")
 
-  div(v-panel-shim title="Tooltip")
-    span(v-tip-shim tip="this tooltip" ) This tooltip aligns top and starts center.
+  div(v-p:panel title="Tooltip")
+    span(v-p:tip tip="this tooltip" ) This tooltip aligns top and starts center.
 
-  div(v-panel-shim title="Toggle Switch")
-    input(v-toggle-shim type="checkbox" name="chk2")
+  div(v-p:panel title="Toggle Switch")
+    input(v-p:toggle type="checkbox" name="chk2")
     label(for="chk2") Toggle switch
 
-  div(v-panel-shim title="Slider")
+  div(v-p:panel title="Slider")
     input(type="range" min="1" max="100" value="50")
 
-  div(v-panel-shim title="Hyperlink")
+  div(v-p:panel title="Hyperlink")
     a() Go here!
 
-  div(v-panel-shim title="Panel")
+  div(v-p:panel title="Panel")
       p some panel with some text and stuff.  Whow knows what you can put into a panel!  The world is your Oyster!
 
-  div(v-panel-shim title="Chips")
-    .chips
-      span(v-chip-shim.close) hellen@highwater.com
-      span(v-chip-shim) sam@thatplace.com
-      span(v-chip-shim) hob@shire.com
+  div(v-p:panel title="Chips")
+    div
+      span(v-p:chip.close) hellen@highwater.com
+      span(v-p:chip) sam@thatplace.com
+      span(v-p:chip) hob@shire.com
 
-  div(v-panel-shim title="Accordian")
+  div(v-p:panel title="Accordian")
     p You can change the accordian to collapse by setting the inputs as radio buttons instead of checkbox's
-      .accordian
-        input(type="radio" accordian name="accGroup1" id="panel1")
-        label(for="panel1") Panel 1
-        section(accordian)
+      div
+        section(v-p:accordian.single title="Panel 1" name="accGroup1")
           p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto possimus at a cum saepe molestias modi illo facere ducimus voluptatibus praesentium deleniti fugiat ab error quia sit perspiciatis velit necessitatibus.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet.
-      .accordian
-        input(type="radio" accordian name="accGroup1" id="panel2")
-        label(for="panel2") Panel 1
-        section(accordian)
+      div
+        section(v-p:accordian.single title="Panel 2" name="accGroup1")
           p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto possimus at a cum saepe molestias modi illo facere ducimus voluptatibus praesentium deleniti fugiat ab error quia sit perspiciatis velit necessitatibus.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet.
-      .accordian
-        input(type="radio" accordian name="accGroup1" id="panel3")
-        label(for="panel3") Panel 1
-        section(accordian)
+      div
+        section(v-p:accordian.single title="Panel 3" name="accGroup1")
           p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto possimus at a cum saepe molestias modi illo facere ducimus voluptatibus praesentium deleniti fugiat ab error quia sit perspiciatis velit necessitatibus.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet.
-  
-  div(v-panel-shim title="Modal")
-    button(v-button-shim.primary @click="showModal=!showModal") Open
+      div
+        section(v-p:accordian.single title="Panel 4" name="accGroup1")
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto possimus at a cum saepe molestias modi illo facere ducimus voluptatibus praesentium deleniti fugiat ab error quia sit perspiciatis velit necessitatibus.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet.
+  div(v-p:panel title="Modal")
+    button(v-p:button.primary @click="showModal=!showModal") Open
     .modal(:open="showModal" @click="showModal=!showModal")
       section(@click.stop)
         h1 Hey modal
         main
         nav
-          button(v-button-shim.primary @click="showModal=!showModal") Close
+          button(v-p:button.primary @click="showModal=!showModal") Close
 
-  div(v-panel-shim title="Toast")
-    button(v-button-shim.primary @click="show")
+  div(v-p:panel title="Toast")
+    button(v-p:button.primary @click="show")
 
-  div(v-panel-shim title="Alert")
+  div(v-p:panel title="Alert")
 
-  div(v-panel-shim title="Phone number")
+  div(v-p:panel title="Phone number")
     input(v-phone-number="phoneNo" v-model='phoneNo')
     br
     | {{ phoneNo }}
     br
     | filltered phone {{ phoneNo | phone }}
 
-  div(v-panel-shim title="Password")
+  div(v-p:panel title="Password")
 
-  div(v-panel-shim)
+  div(v-p:panel)
     div
       h1 Loading
-      div(v-if="loading" v-loading-shim)
-    button(v-button-shim.primary @click="loading=!loading")  loading toggle
+      div(v-p:loading v-if="loading")
+    button(v-p:button.primary @click="loading=!loading")  loading toggle
 
 
 </template>

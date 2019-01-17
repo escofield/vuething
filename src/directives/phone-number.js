@@ -16,7 +16,7 @@ const phoneNumber = function(el, binding, vnode) {
 Vue.directive('phone-number', {
   bind: phoneNumber,
   update: phoneNumber,
-  inserted: function(el){
-    el.setAttribute('maxlength',14)
-  }
+  inserted: function(el) {
+    el.setAttribute('maxlength', 14)
+  },
 })
