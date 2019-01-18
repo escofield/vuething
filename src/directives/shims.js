@@ -191,22 +191,28 @@ Shim.register('label', {
 Shim.register('accordian', {
   update: function(el, binding) {
     const id = uuidv4()
-    if (!el.previousSibling ||
+    if (
+      !el.previousSibling ||
       el.previousSibling.tagName !== 'LABEL' ||
       el.previousSibling.className.indexOf('accordian-title') < 0
     ) {
       const input = document.createElement('input')
-      input.setAttribute("type",binding.modifiers.single ? "radio" : "checkbox")
-      input.setAttribute("accordian","")
+      input.setAttribute(
+        'type',
+        binding.modifiers.single ? 'radio' : 'checkbox',
+      )
+      input.setAttribute('accordian', '')
       input.name = el.getAttribute('name')
       input.id = id
-      el.parentNode.insertBefore(input,el)
+      el.parentNode.insertBefore(input, el)
       const label = document.createElement('label')
-      label.setAttribute("for",id)
+      label.setAttribute('for', id)
+      label.className="accordian-title"
       const i = document.createTextNode(el.getAttribute('title'))
       label.appendChild(i)
-      el.parentNode.insertBefore(label,el)
-      el.setAttribute("accordian","")
+      el.parentNode.insertBefore(label, el)
+      el.setAttribute('accordian', '')
     }
   },
 })
+

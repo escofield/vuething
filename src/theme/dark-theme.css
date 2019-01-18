@@ -17,11 +17,11 @@
     --dk-panel-shadow-color: rgba(0,0,0,.12);
     --dk-chip-back-color: #9fa7b9;
     --dk-chip-text-color: #262729;
-    --dk-control-fill-color: #262729;
+    --dk-control-fill-color: #414141;
     --dk-control-alt-fill-color: #6b6b6b;
     --dk-control-on-fill-color: #bb16a3;
     --dk-control-text-color: #515a6e;
-    --dk-control-alt-text-color: #515a6e;
+    --dk-control-alt-text-color: #1f2124;
     --dk-control-text-dim-color: #9fa7b9;
     --dk-mask-color: rgba(0,0,0,.32);
     --dk-loading-mask-color: rgba(38, 39, 41,.72);

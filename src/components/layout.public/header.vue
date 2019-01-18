@@ -17,6 +17,7 @@ export default {
       cssVariables.forEach(name => {
         const value = style.getPropertyValue(`--${theme}-${name}`)
         html.style.setProperty(`--${name}`, value)
+        console.log(`updating: --${name} to %c${value}`, `color: ${value}`)
       })
     },
   },
