@@ -150,7 +150,7 @@ Shim.register('toggle', {
 })
 
 Shim.register('chip', {
-  update: function(el, binding) {
+  bind: function(el, binding, vnode) {
     if (el.className.indexOf('chip') < 0) {
       el.className = (el.className + ' chip').trim()
     }
@@ -158,6 +158,7 @@ Shim.register('chip', {
       const i = document.createElement('DIV')
       i.className = `close`
       el.appendChild(i)
+      i.addEventListener('click', binding.value)
     }
   },
 })
@@ -193,6 +194,8 @@ Shim.register('accordian', {
     const id = uuidv4()
     if (
       !el.previousSibling ||
+<<<<<<< Updated upstream
+=======
       el.previousSibling.tagName !== 'LABEL' ||
       el.previousSibling.className.indexOf('accordian-title') < 0
     ) {
@@ -207,7 +210,41 @@ Shim.register('accordian', {
       el.parentNode.insertBefore(input, el)
       const label = document.createElement('label')
       label.setAttribute('for', id)
+      label.className = 'accordian-title'
+      const i = document.createTextNode(el.getAttribute('title'))
+      label.appendChild(i)
+      el.parentNode.insertBefore(label, el)
+      el.setAttribute('accordian', '')
+    }
+  },
+})
+
+
+Shim.register('modal', {
+  update: function(el, binding) {
+    const id = uuidv4()
+    if (
+      !el.previousSibling ||
+>>>>>>> Stashed changes
+      el.previousSibling.tagName !== 'LABEL' ||
+      el.previousSibling.className.indexOf('accordian-title') < 0
+    ) {
+      const input = document.createElement('input')
+      input.setAttribute(
+        'type',
+        binding.modifiers.single ? 'radio' : 'checkbox',
+      )
+      input.setAttribute('accordian', '')
+      input.name = el.getAttribute('name')
+      input.id = id
+      el.parentNode.insertBefore(input, el)
+      const label = document.createElement('label')
+      label.setAttribute('for', id)
+<<<<<<< Updated upstream
       label.className="accordian-title"
+=======
+      label.className = 'accordian-title'
+>>>>>>> Stashed changes
       const i = document.createTextNode(el.getAttribute('title'))
       label.appendChild(i)
       el.parentNode.insertBefore(label, el)

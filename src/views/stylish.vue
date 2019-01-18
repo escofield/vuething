@@ -19,6 +19,9 @@ let Stylish = {
     show() {
       alert('not implemented')
     },
+    closeChip() {
+      console.log('close chip')
+    },
   },
 }
 VueTidyRoutes.route(`/:locale(\\w\\w)?/stylish`, {
@@ -30,6 +33,8 @@ export default Stylish
 </script>
 <template lang="pug">
 .stylish
+
+
   router-link(:to="{ name:'default' }") away
   div(v-p:panel title="Fonts")
     label H1
@@ -101,7 +106,7 @@ export default Stylish
 
   div(v-p:panel title="Chips")
     div
-      span(v-p:chip.close) hellen@highwater.com
+      span(v-p:chip.close="closeChip") hellen@highwater.com
       span(v-p:chip) sam@thatplace.com
       span(v-p:chip) hob@shire.com
 
