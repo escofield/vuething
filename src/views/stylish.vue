@@ -36,8 +36,6 @@ export default Stylish
 </script>
 <template lang="pug">
 .stylish
-
-
   router-link(:to="{ name:'default' }") away
   div(v-p:panel title="Fonts")
     label H1
