@@ -13,6 +13,7 @@ let Stylish = {
       iconHome: ['icon', 'icon-home'],
       badgeCount: 5,
       btnSuccess: 'success',
+      colors: ['Primary', 'Primary Light', 'Primary Dark']
     }
   },
   methods: {
@@ -25,6 +26,9 @@ let Stylish = {
     closeModal() {
       console.log('close modal')
     },
+    toClassName(v){
+      return v.toLowerCase().replace(' ', '-')
+    }
   },
 }
 VueTidyRoutes.route(`/:locale(\\w\\w)?/stylish`, {
@@ -36,7 +40,15 @@ export default Stylish
 </script>
 <template lang="pug">
 .stylish
-  router-link(:to="{ name:'default' }") away
+  .vp-panel
+    h1 colors
+    .color-pal
+      .swatch(v-for="color in colors" :class="toClassName(color)")
+        h3.color-text {{ color }}
+        h4.color-secondary Secondary Text
+
+
+
   .vp-panel
     h1 Fonts
     label H1
@@ -188,5 +200,28 @@ span.badge {
 
 .btns > button {
   margin-bottom: 1rem;
+}
+
+.color-pal{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 1em;
+  grid-row-gap: .5em;
+}
+
+.swatch {
+  width: 100%;
+  height: 5rem;
+  padding: 1rem;
+}
+
+.swatch.primary{
+  background-color: var(--primary-color)
+}
+.primary > .color-text {
+  color: var(--primary-color-text);
+}
+.primary > .color-secondary {
+  color: var(--primary-color-secondary-text);
 }
 </style>

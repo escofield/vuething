@@ -1,10 +1,19 @@
 
 :root {
+  --primary-color: var(--lt-primary-color);
+  --primary-color-text: var(--lt-primary-color-text);
+  --primary-color-secondary-text: var(--lt-primary-color-secondary-text);
+
+  --primary-light-color: var(--lt-primary-light-color);
+  --primary-light-color-text: var(--lt-primary-light-color-text);
+  --primary-light-color-secondary-text: var(--lt-primary-light-color-secondary-text);
+
+  --primary-dark-color: var(--lt-primary-dark-color);
+  --primary-dark-color-text: var(--lt-primary-dark-color-text);
+  --primary-dark-color-secondary-text:  var(--lt-primary-dark-color-secondary-text);
+
   --base-body-color: var(--lt-base-body-color);
   --panel-color: var(--lt-panel-color);
-  --primary-color: var(--lt-primary-color);
-  --primary-color-dim: var(--lt-primary-color-dim);
-  --primary-color-dark: var(--lt-primary-color-dark);
   --base-text-color: var(--lt-base-text-color);
   --base-text-back: var(--lt-base-text-back);
   --base-text-dim-color:  var(--lt-base-text-dim-color);

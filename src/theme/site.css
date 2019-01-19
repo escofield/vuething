@@ -302,7 +302,7 @@ input[type="checkbox"]:hover{
 input:hover,
 textarea:hover,
 select:hover {
-    border: solid 1px var(--primary-color-dim);
+    border: solid 1px var(--primary-light-color);
 }
 
 input:focus, 
@@ -578,8 +578,8 @@ input.accordian + label{
     background-color: var(--primary-color);
     margin-left: 1em;
     margin-right: 1em;
-    color: var(--primary-color-dim);
-    border-bottom: solid 1px var(--primary-color-dim);
+    color: var(--primary-light-color);
+    border-bottom: solid 1px var(--primary-light-color);
     responsive: font-size inset 40;
     font-weight: bold;
     transition : all 200ms ease-in;
@@ -597,7 +597,7 @@ input.accordian:checked + label{
     margin-right: 0;
     border-bottom: solid 2px var(--panel-shadow-color);
     responsive: font-size inset 30;
-    background: radial-gradient(ellipse at right top, var(--primary-color-dim) -40%,var(--primary-color) 65%);
+    background: radial-gradient(ellipse at right top, var(--primary-light-color) -40%,var(--primary-color) 65%);
 }
 input.accordian + label:after{
     content: '\f101';

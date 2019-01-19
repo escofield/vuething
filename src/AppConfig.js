@@ -7,7 +7,7 @@ export const cssVariables = [
   'base-body-color',
   'panel-color',
   'primary-color',
-  'primary-color-dim',
+  'primary-light-color',
   'info-color',
   'warning-color',
   'error-color',

@@ -1,14 +1,35 @@
 /* only to be referenced from variables.css */
 :root{
-    --lt-base-body-color: rgb(185, 185, 185);
-    --lt-panel-color: #fff;
     --lt-primary-color: #bb16a3;
-    --lt-primary-color-dim: #fdbff4;
-    --lt-primary-color-dark: #3d0134;
+    --lt-primary-color-text: #ffeefc;
+    --lt-primary-color-secondary-text: #dabad5;
+
+    --lt-primary-light-color: #fdbff4;
+    --lt-primary-light-color-text: #41203c;
+    --lt-primary-light-color-secondary-text: #52364d;
+
+    --lt-primary-dark-color: #3d0134;
+    --lt-primary-dark-color-text: #ddb4d7;
+    --lt-primary-dark-color-secondary-text: #94748f;
+
+
     --lt-info-color: #256eff;
     --lt-warning-color: #f90;
     --lt-error-color: #d32929;
     --lt-success-color: #19be6b;
+
+
+
+    --lt-primary-color-dark: #3d0134;
+
+
+
+
+
+
+    --lt-base-body-color: rgb(185, 185, 185);
+    --lt-panel-color: #fff;
+
     --lt-base-text-color: #515a6e;
     --lt-base-text-dim-color: #9fa7b9;
     --lt-base-text-back: #f5f5f5;
