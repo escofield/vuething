@@ -54,13 +54,11 @@ Shim.register('panel', {
 })
 
 Shim.register('loading', {
-  bind: function(el) {
-    el.innerHTML = "<div class='loading-mask'><div class='spinner'></div></div>"
+  inserted: function(el) {
     if (el.className.indexOf('loading') < 0) {
+      el.innerHTML = "<div class='loading-mask'><div class='spinner'></div></div>"
       el.className = (el.className + ' loading').trim()
     }
-  },
-  inserted: function(el) {
     if (el.parentNode.className.indexOf('loading-container') < 0) {
       el.parentNode.className = (
         el.parentNode.className + ' loading-container'
@@ -82,7 +80,7 @@ const GetSomeClass_Icons = function(expression, modifiers) {
 }
 
 Shim.register('prefix', {
-  update: function(el, binding, vnode) {
+  inserted: function(el, binding, vnode) {
     const icons = GetSomeClass_Icons(
       vnode.context.$data[binding.expression],
       binding.modifiers,
@@ -102,7 +100,7 @@ Shim.register('prefix', {
 })
 
 Shim.register('postfix', {
-  update: function(el, binding, vnode) {
+  inserted: function(el, binding, vnode) {
     const icons = GetSomeClass_Icons(
       vnode.context.$data[binding.expression],
       binding.modifiers,
@@ -125,7 +123,7 @@ Shim.register('postfix', {
 })
 
 Shim.register('badge', {
-  update: function(el, binding, vnode) {
+  inserted: function(el, binding, vnode) {
     if (el.className.indexOf('badge') < 0) {
       el.className = (el.className + ' badge').trim()
     }
@@ -134,7 +132,7 @@ Shim.register('badge', {
 })
 
 Shim.register('tip', {
-  update: function(el) {
+  inserted: function(el) {
     if (el.className.indexOf('tooltip') < 0) {
       el.className = (el.className + ' tooltip').trim()
     }
@@ -142,7 +140,7 @@ Shim.register('tip', {
 })
 
 Shim.register('toggle', {
-  update: function(el) {
+  inserted: function(el) {
     if (el.className.indexOf('toggle') < 0) {
       el.className = (el.className + ' toggle').trim()
     }
@@ -150,7 +148,7 @@ Shim.register('toggle', {
 })
 
 Shim.register('chip', {
-  bind: function(el, binding, vnode) {
+  inserted: function(el, binding) {
     if (el.className.indexOf('chip') < 0) {
       el.className = (el.className + ' chip').trim()
     }
@@ -164,7 +162,7 @@ Shim.register('chip', {
 })
 
 Shim.register('button', {
-  update: function(el, binding, vnode) {
+  inserted: function(el, binding, vnode) {
     const btn =
       (binding.modifiers.primary && 'primary') ||
       (binding.modifiers.success && 'success') ||
@@ -182,7 +180,7 @@ Shim.register('button', {
 })
 
 Shim.register('label', {
-  update: function(el, binding) {
+  inserted: function(el, binding) {
     if (el.className.indexOf('lbl-') < 0 && binding.modifiers.required) {
       el.className = (el.className + ` required`).trim()
     }
@@ -190,7 +188,7 @@ Shim.register('label', {
 })
 
 Shim.register('accordian', {
-  update: function(el, binding) {
+  inserted: function(el, binding) {
     const id = uuidv4()
     if (
       !el.previousSibling ||
@@ -213,6 +211,24 @@ Shim.register('accordian', {
       label.appendChild(i)
       el.parentNode.insertBefore(label, el)
       el.setAttribute('accordian', '')
+    }
+  },
+})
+
+Shim.register('modal', {
+  bind: function(el, binding, vnode) {
+    if (el.className.indexOf('modal') <= 0) {
+      el.className = `${el.className} modal`
+      if (
+        binding.modifiers.close &&
+        el.querySelectorAll('.close-modal').length == 0
+      ) {
+        const i = document.createElement('DIV')
+        i.className = `close-modal`
+        const section = el.querySelector('section')
+        section.appendChild(i)
+        i.addEventListener('click', binding.value)
+      }
     }
   },
 })

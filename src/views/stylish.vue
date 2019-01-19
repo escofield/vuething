@@ -22,6 +22,9 @@ let Stylish = {
     closeChip() {
       console.log('close chip')
     },
+    closeModal() {
+      console.log('close modal')
+    },
   },
 }
 VueTidyRoutes.route(`/:locale(\\w\\w)?/stylish`, {
@@ -126,7 +129,7 @@ export default Stylish
           p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto possimus at a cum saepe molestias modi illo facere ducimus voluptatibus praesentium deleniti fugiat ab error quia sit perspiciatis velit necessitatibus.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet.
   div(v-p:panel title="Modal")
     button(v-p:button.primary @click="showModal=!showModal") Open
-    .modal(:open="showModal" @click="showModal=!showModal")
+    div(v-p:modal.close="closeModal" :open="showModal" @click="showModal=!showModal")
       section(@click.stop)
         h1 Hey modal
         main
