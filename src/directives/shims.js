@@ -38,6 +38,45 @@ Vue.directive('p', {
   },
 })
 
+const format_phone = function(value) {
+  const phoneNums = value.replace(/\D/g, '')
+  const pattern = /(\d{0,3})(\d{0,3})(\d{0,4})/
+  const match = phoneNums.match(pattern)
+
+  let result = ''
+
+  if (match[1]) {
+    result = `${result}(${match[1]}`
+  }
+  if (match[2] || (match[1] && match[1].length >= 3)) {
+    result = `${result}) ${match[2]}`
+  }
+  if (match[3] || (match[2] && match[2].length >= 3)) {
+    result = `${result}-${match[3]}`
+  }
+  return result
+}
+
+const phoneNumber = function(el, binding, vnode) {
+  const justNo = binding.value.replace(/\D/g, '')
+  if (
+    !binding.oldValue ||
+    binding.value.length > binding.oldValue.length ||
+    justNo.length >= 11
+  ) {
+    el.value = format_phone(binding.value)
+    vnode.context.$data[binding.expression] = el.value
+  }
+}
+
+Shim.register('phone', {
+  bind: phoneNumber,
+  update: phoneNumber,
+  inserted: function(el) {
+    el.setAttribute('maxlength', 14)
+  },
+})
+
 Shim.register('panel', {
   inserted: function(el) {
     if (el.className.indexOf('vp-panel') < 0) {
@@ -56,7 +95,8 @@ Shim.register('panel', {
 Shim.register('loading', {
   inserted: function(el) {
     if (el.className.indexOf('vp-loading') < 0) {
-      el.innerHTML = "<div class='vp-loading-mask'><div class='vp-spinner'></div></div>"
+      el.innerHTML =
+        "<div class='vp-loading-mask'><div class='vp-spinner'></div></div>"
       el.className = (el.className + ' vp-loading').trim()
     }
     if (el.parentNode.className.indexOf('vp-loading-container') < 0) {
@@ -152,7 +192,10 @@ Shim.register('chip', {
     if (el.className.indexOf('vp-chip') < 0) {
       el.className = (el.className + ' vp-chip').trim()
     }
-    if (binding.modifiers.close && el.querySelectorAll('.vp-close').length == 0) {
+    if (
+      binding.modifiers.close &&
+      el.querySelectorAll('.vp-close').length == 0
+    ) {
       const i = document.createElement('DIV')
       i.className = `vp-close`
       el.appendChild(i)
@@ -216,7 +259,7 @@ Shim.register('accordian', {
 })
 
 Shim.register('modal', {
-  bind: function(el, binding, vnode) {
+  bind: function(el, binding) {
     if (el.className.indexOf('vp-modal') <= 0) {
       el.className = `${el.className} vp-modal`
       if (

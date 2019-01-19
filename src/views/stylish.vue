@@ -136,19 +136,10 @@ export default Stylish
         nav
           button(v-p:button.primary @click="showModal=!showModal") Close
 
-  div(v-p:panel title="Toast")
-    button(v-p:button.primary @click="show")
-
-  div(v-p:panel title="Alert")
-
   div(v-p:panel title="Phone number")
-    input(v-phone-number="phoneNo" v-model='phoneNo')
+    input(v-p:phone="phoneNo" v-model='phoneNo')
     br
     | {{ phoneNo }}
-    br
-    | filltered phone {{ phoneNo | phone }}
-
-  div(v-p:panel title="Password")
 
   div(v-p:panel)
     div
@@ -171,5 +162,4 @@ span.badge {
 .btns > button {
   margin-bottom: 1rem;
 }
-
 </style>
