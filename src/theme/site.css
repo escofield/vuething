@@ -343,11 +343,11 @@ select:focus{
  display: none;
 }
 
-.vp-tooltip[tip]{
+.vp-tooltip{
     position: relative;
 }
 
-.vp-tooltip[tip]:before{
+.vp-tooltip:before{
     content: attr(tip);
     background-color: var(--primary-color);
     color: var(--button-text-color);
@@ -360,12 +360,12 @@ select:focus{
     top: -1.9em;
     left: 50%;
 }
-.vp-tooltip[tip]:hover:after,
-.vp-tooltip[tip]:hover:before{
+.vp-tooltip:hover:after,
+.vp-tooltip:hover:before{
     display: inline;
 }
 
-.vp-tooltip[tip]:hover:after{
+.vp-tooltip:hover:after{
     content: '';
     position: absolute;
     background-color: var(--primary-color);
@@ -559,16 +559,16 @@ input[type=range]:focus::-ms-fill-upper {
 
 }
 
-input[accordian]{
+input.accordian{
     display: none;
 }
-section[accordian]{
+section.accordian{
     max-height: 0em;
     overflow: hidden;
     transition : all 1s ease-in-out;
     box-shadow: 0 2px 2px 0 var(--panel-shadow-color), 0 1px 5px 0 var(--panel-shadow-color), 0 3px 1px -2px var(--panel-shadow-color);
 }
-input[accordian] + label{
+input.accordian + label{
     display: block;
     text-align: left;
     position: relative;
@@ -586,10 +586,10 @@ input[accordian] + label{
     background: radial-gradient(ellipse at left bottom, var(--primary-color-dark) -40%,var(--primary-color) 65%);
 }
 
-input[accordian] + label:hover{
+input.accordian + label:hover{
     cursor: pointer;
 }
-input[accordian]:checked + label{
+input.accordian:checked + label{
     cursor: pointer;
     color: var(--control-alt-text-color);
     box-shadow: 0 6px 8px -2px var(--button-shadow-color);
@@ -599,7 +599,7 @@ input[accordian]:checked + label{
     responsive: font-size inset 30;
     background: radial-gradient(ellipse at right top, var(--primary-color-dim) -40%,var(--primary-color) 65%);
 }
-input[accordian] + label:after{
+input.accordian + label:after{
     content: '\f101';
     font-family: icons;
     font-size: .6em;
@@ -608,17 +608,17 @@ input[accordian] + label:after{
     transition : all 200ms ease-in;
     display: inline;
 }
-input[type="radio"][accordian]:checked + label{
+input[type="radio"].accordian:checked + label{
     cursor: inherit;
 }
-input[type="radio"][accordian]:checked + label:after{
+input[type="radio"].accordian:checked + label:after{
     display:none;
 }
 
-input[accordian]:checked + label:after{
+input.accordian:checked + label:after{
     transform: rotate(180deg);
 }
-input[accordian]:checked ~ section[accordian] {
+input.accordian:checked ~ section.accordian {
     max-height: 100em;
     transition : max-height 5s ease-out;
     padding: 1.5em;

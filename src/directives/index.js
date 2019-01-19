@@ -1,1 +1,1 @@
-import './shims'
+import './v-phone'
