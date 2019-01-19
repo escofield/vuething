@@ -89,7 +89,7 @@ export default Stylish
     | option 2
   
   div(v-p:panel title="Badge")
-    span(v-p:badge="badgeCount")
+    span.badge(v-p:badge="badgeCount")
 
   div(v-p:panel title="Tooltip")
     span(v-p:tip tip="this tooltip" ) This tooltip aligns top and starts center.
@@ -172,15 +172,4 @@ span.badge {
   margin-bottom: 1rem;
 }
 
-.panel {
-  padding: 1.5rem;
-}
-
-.accordian-content {
-  padding: 1.5em;
-}
-
-.parent {
-  position: relative;
-}
 </style>

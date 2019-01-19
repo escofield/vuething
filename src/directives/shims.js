@@ -39,9 +39,9 @@ Vue.directive('p', {
 })
 
 Shim.register('panel', {
-  update: function(el) {
-    if (el.className.indexOf('panel') < 0) {
-      el.className = (el.className + ` panel`).trim()
+  inserted: function(el) {
+    if (el.className.indexOf('vp-panel') < 0) {
+      el.className = (el.className + ` vp-panel`).trim()
     }
     if (el.hasAttribute('title')) {
       const h = document.createElement('H1')
@@ -55,13 +55,13 @@ Shim.register('panel', {
 
 Shim.register('loading', {
   inserted: function(el) {
-    if (el.className.indexOf('loading') < 0) {
-      el.innerHTML = "<div class='loading-mask'><div class='spinner'></div></div>"
-      el.className = (el.className + ' loading').trim()
+    if (el.className.indexOf('vp-loading') < 0) {
+      el.innerHTML = "<div class='vp-loading-mask'><div class='vp-spinner'></div></div>"
+      el.className = (el.className + ' vp-loading').trim()
     }
-    if (el.parentNode.className.indexOf('loading-container') < 0) {
+    if (el.parentNode.className.indexOf('vp-loading-container') < 0) {
       el.parentNode.className = (
-        el.parentNode.className + ' loading-container'
+        el.parentNode.className + ' vp-loading-container'
       ).trim()
     }
   },
@@ -87,14 +87,14 @@ Shim.register('prefix', {
     )
     if (
       el.previousSibling.tagName !== 'I' &&
-      el.previousSibling.className.indexOf('prefix') < 0
+      el.previousSibling.className.indexOf('vp-prefix') < 0
     ) {
       const i = document.createElement('I')
-      i.className = `prefix ${icons.family} ${icons.icon}`
+      i.className = `vp-prefix ${icons.family} ${icons.icon}`
       el.parentNode.insertBefore(i, el)
     }
-    if (el.className.indexOf('prefix') < 0) {
-      el.className = (el.className + ' prefix').trim()
+    if (el.className.indexOf('vp-prefix') < 0) {
+      el.className = (el.className + ' vp-prefix').trim()
     }
   },
 })
@@ -106,17 +106,17 @@ Shim.register('postfix', {
       binding.modifiers,
     )
 
-    if (el.className.indexOf('postfix') < 0) {
-      el.className = (el.className + ' postfix').trim()
+    if (el.className.indexOf('vp-postfix') < 0) {
+      el.className = (el.className + ' vp-postfix').trim()
     }
     if (
       !el.nextSibling ||
       !el.nextSibling.tagName ||
       el.nextSibling.tagName !== 'I' ||
-      el.nextSibling.className.indexOf('postfix') < 0
+      el.nextSibling.className.indexOf('vp-postfix') < 0
     ) {
       const i = document.createElement('I')
-      i.className = `postfix ${icons.family} ${icons.icon}`
+      i.className = `vp-postfix ${icons.family} ${icons.icon}`
       el.parentNode.insertBefore(i, el.nextSibling)
     }
   },
@@ -124,8 +124,8 @@ Shim.register('postfix', {
 
 Shim.register('badge', {
   inserted: function(el, binding, vnode) {
-    if (el.className.indexOf('badge') < 0) {
-      el.className = (el.className + ' badge').trim()
+    if (el.className.indexOf('vp-badge') < 0) {
+      el.className = (el.className + ' vp-badge').trim()
     }
     el.setAttribute('count', vnode.context.$data[binding.expression])
   },
@@ -133,28 +133,28 @@ Shim.register('badge', {
 
 Shim.register('tip', {
   inserted: function(el) {
-    if (el.className.indexOf('tooltip') < 0) {
-      el.className = (el.className + ' tooltip').trim()
+    if (el.className.indexOf('vp-tooltip') < 0) {
+      el.className = (el.className + ' vp-tooltip').trim()
     }
   },
 })
 
 Shim.register('toggle', {
   inserted: function(el) {
-    if (el.className.indexOf('toggle') < 0) {
-      el.className = (el.className + ' toggle').trim()
+    if (el.className.indexOf('vp-toggle') < 0) {
+      el.className = (el.className + ' vp-toggle').trim()
     }
   },
 })
 
 Shim.register('chip', {
   inserted: function(el, binding) {
-    if (el.className.indexOf('chip') < 0) {
-      el.className = (el.className + ' chip').trim()
+    if (el.className.indexOf('vp-chip') < 0) {
+      el.className = (el.className + ' vp-chip').trim()
     }
-    if (binding.modifiers.close && el.querySelectorAll('.close').length == 0) {
+    if (binding.modifiers.close && el.querySelectorAll('.vp-close').length == 0) {
       const i = document.createElement('DIV')
-      i.className = `close`
+      i.className = `vp-close`
       el.appendChild(i)
       i.addEventListener('click', binding.value)
     }
@@ -173,16 +173,16 @@ Shim.register('button', {
       (binding.modifiers.default && 'default') ||
       vnode.context.$data[binding.expression]
 
-    if (el.className.indexOf('btn-') < 0) {
-      el.className = (el.className + ` btn-${btn}`).trim()
+    if (el.className.indexOf('vp-btn-') < 0) {
+      el.className = (el.className + ` vp-btn-${btn}`).trim()
     }
   },
 })
 
 Shim.register('label', {
   inserted: function(el, binding) {
-    if (el.className.indexOf('lbl-') < 0 && binding.modifiers.required) {
-      el.className = (el.className + ` required`).trim()
+    if (el.className.indexOf('vp-lbl-') < 0 && binding.modifiers.required) {
+      el.className = (el.className + ` vp-required`).trim()
     }
   },
 })
@@ -193,7 +193,7 @@ Shim.register('accordian', {
     if (
       !el.previousSibling ||
       el.previousSibling.tagName !== 'LABEL' ||
-      el.previousSibling.className.indexOf('accordian-title') < 0
+      el.previousSibling.className.indexOf('vp-accordian-title') < 0
     ) {
       const input = document.createElement('input')
       input.setAttribute(
@@ -206,7 +206,7 @@ Shim.register('accordian', {
       el.parentNode.insertBefore(input, el)
       const label = document.createElement('label')
       label.setAttribute('for', id)
-      label.className = 'accordian-title'
+      label.className = 'vp-accordian-title'
       const i = document.createTextNode(el.getAttribute('title'))
       label.appendChild(i)
       el.parentNode.insertBefore(label, el)
@@ -217,14 +217,14 @@ Shim.register('accordian', {
 
 Shim.register('modal', {
   bind: function(el, binding, vnode) {
-    if (el.className.indexOf('modal') <= 0) {
-      el.className = `${el.className} modal`
+    if (el.className.indexOf('vp-modal') <= 0) {
+      el.className = `${el.className} vp-modal`
       if (
         binding.modifiers.close &&
-        el.querySelectorAll('.close-modal').length == 0
+        el.querySelectorAll('.vp-close-modal').length == 0
       ) {
         const i = document.createElement('DIV')
-        i.className = `close-modal`
+        i.className = `vp-close-modal`
         const section = el.querySelector('section')
         section.appendChild(i)
         i.addEventListener('click', binding.value)
