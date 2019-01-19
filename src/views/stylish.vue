@@ -96,11 +96,11 @@ export default Stylish
   
   .vp-panel
     h1 Badge
-    span.badge.vp-badge(count="5")
+    span.badge.vp-badge(data-count="5")
 
   .vp-panel
     h1 Tooltip
-    span.vp-tooltip(tip="this tooltip") This tooltip aligns top and starts center.
+    span.vp-tooltip(data-tip="this tooltip") This tooltip aligns top and starts center.
 
   .vp-panel
     h1 Toggle Switch
@@ -153,7 +153,7 @@ export default Stylish
   .vp-panel
     h1 Modal
     button.vp-btn-primary(@click="showModal=!showModal") Open
-    .vp-modal(:open="showModal" @click="showModal=!showModal")
+    .vp-modal(:data-open="showModal" @click="showModal=!showModal")
       section(@click.stop)
         h1 Hey modal
         main

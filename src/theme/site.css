@@ -311,15 +311,15 @@ select:focus{
     border: solid 1px var(--primary-color);
 }
 
-.vp-badge[count]{
+.vp-badge[data-count]{
     position: relative;
 }
 
-.vp-badge[count]:after {
+.vp-badge[data-count]:after {
     background: red;
     border-radius: .7em;
     color: #fff;
-    content: attr(count);
+    content: attr(data-count);
     responsive: font-size inset 60;
     responsive: line-height outset 60;
     min-width: 20px;
@@ -331,15 +331,15 @@ select:focus{
     box-shadow: 1px 1px 6px var(--button-shadow-color);
     transition : all 250ms linear;
 }
-.vp-badge[count]:hover:after{
+.vp-badge[data-count]:hover:after{
     filter: brightness(115%);
     transform: scale(1.3);
     transition : all 50ms linear;
 }
 
-.vp-badge[count^="-"]:after,
-.vp-badge[count="0"]:after,
-.vp-badge[count=""]:after {
+.vp-badge[data-count^="-"]:after,
+.vp-badge[data-count="0"]:after,
+.vp-badge[data-count=""]:after {
  display: none;
 }
 
@@ -348,7 +348,7 @@ select:focus{
 }
 
 .vp-tooltip:before{
-    content: attr(tip);
+    content: attr(data-tip);
     background-color: var(--primary-color);
     color: var(--button-text-color);
     responsive: font-size inset 60;
@@ -662,7 +662,7 @@ input.accordian:checked ~ section.accordian {
     transition : all 200ms ease-in;
 }
 
-.vp-modal[open] {
+.vp-modal[data-open] {
     display: block;
 }
 
