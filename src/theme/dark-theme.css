@@ -1,28 +1,40 @@
 /* only to be referenced from variables.css */
 :root{
-    --dk-base-body-color: #000000;
-    --dk-panel-color: #262729;
-    --dk-primary-color: #bb16a3;
-    --dk-primary-color-dim: #d6a0ce;
-    --dk-primary-color-dark: #3d0134;
-    --dk-info-color: #256eff;
-    --dk-warning-color: #f90;
-    --dk-error-color: #d32929;
-    --dk-success-color: #19be6b;
-    --dk-base-text-color: #c4cbda;
-    --dk-base-text-dim-color: #6b6b6b;
-    --dk-base-text-back: #16161a;
-    --dk-button-text-color: white;
-    --dk-button-shadow-color: rgba(0,0,0,.4);
-    --dk-panel-shadow-color: rgba(0,0,0,.12);
-    --dk-chip-back-color: #9fa7b9;
-    --dk-chip-text-color: #262729;
-    --dk-control-fill-color: #414141;
-    --dk-control-alt-fill-color: #6b6b6b;
-    --dk-control-on-fill-color: #bb16a3;
-    --dk-control-text-color: #515a6e;
-    --dk-control-alt-text-color: #1f2124;
-    --dk-control-text-dim-color: #9fa7b9;
-    --dk-mask-color: rgba(0,0,0,.32);
-    --dk-loading-mask-color: rgba(38, 39, 41,.72);
+    --dk-primary-1: hsl(309, 79%, 95%);
+    --dk-primary-2: hsl(309, 79%, 80%);
+    --dk-primary-3: hsl(309, 79%, 41%);
+    --dk-primary-4: hsl(309, 79%, 20%);
+
+    --dk-info-1: hsl(220, 100%, 95%);
+    --dk-info-2: hsl(220, 100%, 80%);
+    --dk-info-3: hsl(220, 100%, 41%);
+    --dk-info-4: hsl(220, 100%, 15%);
+
+    --dk-warning-1: hsl(36, 100%, 95%);
+    --dk-warning-2: hsl(36, 100%, 80%);
+    --dk-warning-3: hsl(36, 100%, 41%);
+    --dk-warning-4: hsl(36, 100%, 20%);
+
+    --dk-error-1: hsl(0, 67%, 95%);
+    --dk-error-2: hsl(0, 67%, 80%);
+    --dk-error-3: hsl(0, 67%, 41%);
+    --dk-error-4: hsl(0, 67%, 18%);
+
+    --dk-success-1: hsl(150, 77%, 95%);
+    --dk-success-2: hsl(150, 77%, 80%);
+    --dk-success-3: hsl(150, 77%, 41%);
+    --dk-success-4: hsl(150, 77%, 18%);
+
+    --dk-control-1: hsl(204, 5%, 20%);
+    --dk-control-2: hsl(210, 4%, 15%);
+    --dk-control-3: hsl(210, 4%, 41%);
+    --dk-control-4: hsl(210, 4%, 60%);
+    --dk-control-5: hsl(210, 4%, 75%);
+    --dk-control-6: hsl(210, 4%, 94%);
+    --dk-control-7: hsl(210, 4%, 100%);
+
+    --dk-button-shadow-color: rgba(0,0,0,.5);
+    --dk-control-shadow-color: rgba(0,0,0,.12);
+    --dk-mask-color: rgba(0,0,0,.72);
+    --dk-loading-mask-color: rgba(48, 51, 53,.72);
 }

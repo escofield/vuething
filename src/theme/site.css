@@ -1,12 +1,16 @@
 
 html {
-    color: var(--base-text-color);
-    background-color: var(--base-body-color);
+    color: var(--control-4);
+    background-color: var(--control-2);
 }
 
 body {
     margin: 0px;
     padding: 0px;
+}
+
+body.vp-body-no-scroll {
+    overflow: hidden;
 }
 
 h1 {
@@ -62,6 +66,72 @@ h6 {
     margin: 0;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--control-5);
+}
+
+input,
+textarea,
+select {
+    color: var(--control-5);
+    background-color: var(--control-2);
+    border: solid 1px var(--control-2);
+}
+
+
+input[type="checkbox"].vp-toggle{
+    background-color: var(--control-2);
+    color: var(--control-2);
+}
+
+input[type="checkbox"].vp-toggle:after{
+    background-color: var(--control-2);
+    border:solid 3px var(--control-2);
+}
+
+input[type=checkbox].vp-toggle::-ms-check {
+    color: var(--control-2);
+    background-color: var(--control-2);
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    background: var(--control-2);
+    border: solid 1px var(--control-2);
+}
+
+input[type=range]::-moz-range-track {
+    background: var(--control-2);
+}
+
+.vp-chip {
+    background-color: var(--control-2);
+    color: var(--control-4);
+}
+
+.vp-modal > section,
+.vp-panel { 
+    color: var(--control-4);
+    background-color: var(--control-1);
+}
+
+.vp-panel {
+    box-shadow: 1px 1px 5px  var(--panel-shadow-color);
+    border-radius: .7em;
+    padding: 1.5em;
+}
+.vp-panel + .vp-panel {
+    margin-top: 2em;
+}
+
+.vp-panel > h1:first-child {
+    text-align: center;
+}
+
 input[type="radio"],
 input[type="checkbox"]
 {
@@ -79,7 +149,7 @@ input[type="checkbox"]
 input[type="checkbox"]{
     border-radius: .3em;
     background-color: transparent;
-    border:solid 2px var(--primary-color);
+    border:solid 2px var(--primary-3);
 }
 input[type="checkbox"]:checked{
     border:none;
@@ -97,16 +167,16 @@ input[type="checkbox"] + label{
 input[type="radio"]{
     border-radius: 50%;
     background-color: transparent;
-    border:solid 2px var(--primary-color);
+    border:solid 2px var(--primary-3);
 }
 input[type="radio"]:checked{
-    border:solid 1px var(--primary-color);
+    border:solid 1px var(--primary-3);
 }
 input[type="radio"]:checked:after{
     content: '';
     responsive: width inset 60;
     responsive: height inset 60;
-    background-color: var(--primary-color);
+    background-color: var(--primary-3);
     display: block;
     border-radius: 50%;
     position: absolute;
@@ -114,17 +184,17 @@ input[type="radio"]:checked:after{
     margin:auto;
 }
 input[type=radio]::-ms-check {
-    color: var(--primary-color);
+    color: var(--primary-3);
     border: none;
 }
 
 input[type="checkbox"]:checked:after
 {
     border-radius: .3em;
-    background-color: var(--primary-color);
+    background-color: var(--primary-3);
     content: '\f102';
     responsive: line-height outset 50;
-    color: var(--button-text-color);
+    color: var(--primary-1);
     font-family: icons;
     text-align: center;
     vertical-align: middle;
@@ -137,9 +207,9 @@ input[type="checkbox"]:checked:after
 
 input[type=checkbox]::-ms-check {
     border-radius: .3em;
-    background-color: var(--primary-color);
+    background-color: var(--primary-3);
     border: none;
-    color: var(--button-text-color);
+    color: var(--primary-1);
 }
 
 .layout > main {
@@ -148,17 +218,14 @@ input[type=checkbox]::-ms-check {
 }
 
 input, textarea, button, select {
-    color: var(--base-text-color);
     box-sizing: border-box;
 }
 
 input, textarea, select {
-    background-color: var(--base-text-back);
     padding: 0 1em;
     outline: none;
     width: 100%;
     box-shadow: border-box;
-    border: solid 1px var(--base-text-back);;
     transition: border 500ms ease-out;
 }
 
@@ -172,13 +239,12 @@ select {
 }
 
 label {
-    color: var(--base-text-dim-color);
     margin-bottom: .3em;
     margin-top: 1em;
 }
 label.vp-required:after {
     content: "*";
-    color: red;
+    color: var(--error-3);
     margin-left: .2em;
 }
 
@@ -201,11 +267,10 @@ i.vp-postfix:before {
     padding-top:1px;
 }
 i.vp-prefix:before {
-    responsive: padding-left .5rem .8rem;
+    right: -1.4em
 }
 i.vp-postfix:before {
-    right: 0px;
-    responsive: padding-right 1rem 1.5rem;
+    right: .4em;
 }
 input.vp-postfix{
     responsive: padding-right 2.2rem 3rem;
@@ -235,44 +300,44 @@ button.vp-btn-error:hover {
     filter: brightness(115%);
     transition : all 100ms ease-in;
 }
-button.vp-btn-text{ 
-    color: var(--base-text-color);
+.vp-panel button.vp-btn-text{ 
+    color: var(--control-5);
 }
 button.vp-btn-text:hover {
     filter: brightness(115%);
     /* transform: translate(0,-2px); */
-    color: var(--primary-color);
+    color: var(--primary-3);
     transition : all 100ms ease-in;
 }
-button.vp-btn-default{ 
-    border: solid 1px var(--base-text-dim-color);
-    color: var(--base-text-color);
+.vp-panel button.vp-btn-default{ 
+    border: solid 1px var(--control-3);
+    color: var(--control-5);
 }
-button.vp-btn-default:hover {
+.vp-panel button.vp-btn-default:hover {
     filter: brightness(115%);
-    border: solid 1px var(--primary-color);
-    color: var(--primary-color);
+    border: solid 1px var(--primary-3);
+    color: var(--primary-3);
     /* transform: translate(0,-2px); */
 }
 button.vp-btn-error {
-    background-color: var(--error-color);
-    color: var(--button-text-color);
+    background-color: var(--error-3);
+    color: var(--error-1);
 }
 button.vp-btn-warning {
-    background-color: var(--warning-color);
-    color: var(--button-text-color);
+    background-color: var(--warning-3);
+    color: var(--warning-1);
 }
 button.vp-btn-info {
-    background-color: var(--info-color);
-    color: var(--button-text-color);
+    background-color: var(--info-3);
+    color: var(--warning-1);
 }
 button.vp-btn-success {
-    background-color: var(--success-color);
-    color: var(--button-text-color);
+    background-color: var(--success-3);
+    color: var(--success-1);
 }
 button.vp-btn-primary {
-    background-color: var(--primary-color);
-    color: var(--button-text-color);
+    background-color: var(--primary-3);
+    color: var(--primary-1);
 }
 
 button:focus{
@@ -281,7 +346,7 @@ button:focus{
 
 a:visited,
 a{
-    color: var(--primary-color);
+    color: var(--primary-3);
     display:inline-block;
 }
 
@@ -302,24 +367,24 @@ input[type="checkbox"]:hover{
 input:hover,
 textarea:hover,
 select:hover {
-    border: solid 1px var(--primary-color-dim);
+    border: solid 1px var(--primary-2);
 }
 
 input:focus, 
 textarea:focus, 
 select:focus{
-    border: solid 1px var(--primary-color);
+    border: solid 1px var(--primary-3);
 }
 
-.vp-badge[count]{
+.vp-badge[data-count]{
     position: relative;
 }
 
-.vp-badge[count]:after {
-    background: red;
+.vp-badge[data-count]:after {
+    background: var(--primary-3);
     border-radius: .7em;
-    color: #fff;
-    content: attr(count);
+    color: var(--primary-1);
+    content: attr(data-count);
     responsive: font-size inset 60;
     responsive: line-height outset 60;
     min-width: 20px;
@@ -331,26 +396,26 @@ select:focus{
     box-shadow: 1px 1px 6px var(--button-shadow-color);
     transition : all 250ms linear;
 }
-.vp-badge[count]:hover:after{
+.vp-badge[data-count]:hover:after{
     filter: brightness(115%);
     transform: scale(1.3);
     transition : all 50ms linear;
 }
 
-.vp-badge[count^="-"]:after,
-.vp-badge[count="0"]:after,
-.vp-badge[count=""]:after {
+.vp-badge[data-count^="-"]:after,
+.vp-badge[data-count="0"]:after,
+.vp-badge[data-count=""]:after {
  display: none;
 }
 
-.vp-tooltip[tip]{
+.vp-tooltip{
     position: relative;
 }
 
-.vp-tooltip[tip]:before{
-    content: attr(tip);
-    background-color: var(--primary-color);
-    color: var(--button-text-color);
+.vp-tooltip:before{
+    content: attr(data-tip);
+    background-color: var(--primary-3);
+    color: var(--primary-1);
     responsive: font-size inset 60;
     responsive: line-height outset 60;
     padding: .2em 1.2em;
@@ -360,15 +425,15 @@ select:focus{
     top: -1.9em;
     left: 50%;
 }
-.vp-tooltip[tip]:hover:after,
-.vp-tooltip[tip]:hover:before{
+.vp-tooltip:hover:after,
+.vp-tooltip:hover:before{
     display: inline;
 }
 
-.vp-tooltip[tip]:hover:after{
+.vp-tooltip:hover:after{
     content: '';
     position: absolute;
-    background-color: var(--primary-color);
+    background-color: var(--primary-3);
     responsive: font-size inset 60;
     width: .7em;
     height: .7em;
@@ -383,9 +448,7 @@ input[type="checkbox"].vp-toggle{
     height: 1em;
     width: 2em;
     border-radius: 1em;
-    background-color: var(--control-fill-color);
     border:none;
-    color: var(--control-alt-fill-color);
 }
 
 input[type="checkbox"].vp-toggle:after{
@@ -396,8 +459,6 @@ input[type="checkbox"].vp-toggle:after{
     border-radius: 50%;
     position: absolute;
     left: -.5em;
-    background-color: var(--control-alt-fill-color);
-    border:solid 3px var(--control-alt-fill-color);
     box-shadow: 1px 1px 6px  var(--button-shadow-color);
     top: 0;
     bottom: 0;
@@ -407,21 +468,19 @@ input[type="checkbox"].vp-toggle:after{
 
 input[type="checkbox"].vp-toggle:checked:after{
     left: 1em;
-    background-color: var(--control-on-fill-color);
-    border:solid 3px var(--control-on-fill-color);
+    background-color: var(--primary-3);
+    border:solid 3px var(--primary-3);
 }
 
 input[type=checkbox].vp-toggle::-ms-check {
-    color: var(--control-alt-fill-color);
-    background-color: var(--control-alt-fill-color);;
     border: none;
     border-radius: 50%;
     transform: translate(-.5em,0);
 }
 
 input[type=checkbox].vp-toggle:checked::-ms-check {
-    color: var(--control-on-fill-color);
-    background-color: var(--control-on-fill-color);
+    color: var(--primary-3);
+    background-color: var(--primary-3);
     border: none;
     border-radius: 50%;
     transform: translate(.5em,0);
@@ -440,8 +499,6 @@ input[type=range]::-webkit-slider-runnable-track {
     height: .5em;
     margin: none;
     box-sizing: border-box;
-    background: var(--control-fill-color);
-    border: solid 1px var(--control-fill-color);
     border-radius: 1em;
 }
 
@@ -449,7 +506,7 @@ input[type=range]::-webkit-slider-thumb {
     width: calc(1em + 3px);
     height: calc(1em + 3px);
     box-shadow: 1px 1px 6px var(--button-shadow-color);
-    background: var(--control-on-fill-color);
+    background: var(--primary-3);
     cursor: pointer;
     border-radius: 50%;
     appearance: none;
@@ -461,7 +518,6 @@ input[type=range]::-moz-range-track {
     width: 100%;
     height: .5em;
     cursor: pointer;
-    background: var(--control-fill-color);
     border: none;
     border-radius: 1em;
 }
@@ -470,7 +526,7 @@ input[type=range]::-moz-range-thumb {
     width: calc(1em + 3px);
     height: calc(1em + 3px);
     box-shadow: 1px 1px 6px var(--button-shadow-color);
-    background: var(--control-on-fill-color);
+    background: var(--primary-3);
     cursor: pointer;
     border-radius: 50%;
     border: none;
@@ -504,23 +560,7 @@ input[type=range]:focus::-ms-fill-upper {
     background: transparent;
 }
 
-.vp-panel {
-    box-shadow: 1px 1px 5px  var(--panel-shadow-color);
-    border-radius: .7em;
-    background-color: var(--panel-color);
-    padding: 1.5em;
-}
-.vp-panel + .vp-panel {
-    margin-top: 2em;
-}
-
-.vp-panel > h1:first-child {
-    text-align: center;
-}
-
 .vp-chip {
-    background-color: var(--chip-back-color);
-    color: var(--chip-text-color);
     border-radius: 1em;
     padding-top: .3em;
     padding-bottom: .3em;
@@ -559,47 +599,47 @@ input[type=range]:focus::-ms-fill-upper {
 
 }
 
-input[accordian]{
+input.accordian{
     display: none;
 }
-section[accordian]{
+section.accordian{
     max-height: 0em;
     overflow: hidden;
     transition : all 1s ease-in-out;
     box-shadow: 0 2px 2px 0 var(--panel-shadow-color), 0 1px 5px 0 var(--panel-shadow-color), 0 3px 1px -2px var(--panel-shadow-color);
 }
-input[accordian] + label{
+input.accordian + label{
     display: block;
     text-align: left;
     position: relative;
     margin-bottom: 0;
     padding: 1em;
     margin-top: 0;
-    background-color: var(--primary-color);
+    background-color: var(--primary-3);
     margin-left: 1em;
     margin-right: 1em;
-    color: var(--primary-color-dim);
-    border-bottom: solid 1px var(--primary-color-dim);
+    color: var(--primary-2);
+    border-bottom: solid 1px var(--primary-2);
     responsive: font-size inset 40;
     font-weight: bold;
     transition : all 200ms ease-in;
-    background: radial-gradient(ellipse at left bottom, var(--primary-color-dark) -40%,var(--primary-color) 65%);
+    background: radial-gradient(ellipse at left bottom, var(--primary-4) -40%,var(--primary-3) 65%);
 }
 
-input[accordian] + label:hover{
+input.accordian + label:hover{
     cursor: pointer;
 }
-input[accordian]:checked + label{
+input.accordian:checked + label{
     cursor: pointer;
-    color: var(--control-alt-text-color);
+    color: var(--primary-1);
     box-shadow: 0 6px 8px -2px var(--button-shadow-color);
     margin-left: 0;
     margin-right: 0;
     border-bottom: solid 2px var(--panel-shadow-color);
     responsive: font-size inset 30;
-    background: radial-gradient(ellipse at right top, var(--primary-color-dim) -40%,var(--primary-color) 65%);
+    background: radial-gradient(ellipse at right top, var(--primary-2) -40%,var(--primary-3) 65%);
 }
-input[accordian] + label:after{
+input.accordian + label:after{
     content: '\f101';
     font-family: icons;
     font-size: .6em;
@@ -608,17 +648,17 @@ input[accordian] + label:after{
     transition : all 200ms ease-in;
     display: inline;
 }
-input[type="radio"][accordian]:checked + label{
+input[type="radio"].accordian:checked + label{
     cursor: inherit;
 }
-input[type="radio"][accordian]:checked + label:after{
+input[type="radio"].accordian:checked + label:after{
     display:none;
 }
 
-input[accordian]:checked + label:after{
+input.accordian:checked + label:after{
     transform: rotate(180deg);
 }
-input[accordian]:checked ~ section[accordian] {
+input.accordian:checked ~ section.accordian {
     max-height: 100em;
     transition : max-height 5s ease-out;
     padding: 1.5em;
@@ -633,12 +673,11 @@ input[accordian]:checked ~ section[accordian] {
     bottom: 0;
     z-index: 1;
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     background-color: var(--mask-color);
 }
 
 .vp-modal > section {
-    background-color: white;
     width: 80vw;
     margin: auto;
     margin-top: 3em;
@@ -647,23 +686,41 @@ input[accordian]:checked ~ section[accordian] {
     position: relative;
 }
 
-.vp-modal > section > .vp-close-modal:hover:after{
+.vp-modal > section > .vp-close-modal{
+    display: inline-block;
+    position: absolute;
+    top: .15em;
+    right: .5em;
+}
+
+.vp-modal > section > .vp-close-modal:hover{
     cursor: pointer;
 }
 
 .vp-modal > section > .vp-close-modal:after{
-    display: inline-block;
-    position: absolute;
-
     content: '\f103';
     font-family: icons;
-    top: .15em;
-    right: .5em;
+    margin-left: .5rem;
     transition : all 200ms ease-in;
+    position: relative;
+    top: .2rem;
 }
 
-.vp-modal[open] {
+.vp-modal[data-open] {
     display: block;
+}
+
+@media (max-width: 960px){
+
+    .vp-modal > section {
+        width: 100%;
+        margin: auto;
+        margin-top: .5em;
+        border-radius: 1em;
+        padding: 1em 2em;
+        position: relative;
+        box-sizing: border-box;
+    }
 }
 
 .vp-loader,
@@ -708,7 +765,7 @@ input[accordian]:checked ~ section[accordian] {
 .vp-spinner, .vp-spinner:before, .vp-spinner:after {
     width: 4px;
     height: 20px;
-    background-color: var(--primary-color);
+    background-color: var(--primary-3);
     border-radius: 2px;
     position: absolute;
     top: 50%;
@@ -767,4 +824,54 @@ input[accordian]:checked ~ section[accordian] {
 }
 .vp-spinner:after {
     animation: bounce-middle 0.6s ease 0.2s infinite;
+}
+
+.vp-pass-no-score,
+.vp-pass-bad,
+.vp-pass-weak,
+.vp-pass-safe,
+.vp-pass-strong{
+    display: none;
+}
+
+input.vp-pass-no-score ~ .vp-pass-no-score{
+    display: block;
+}
+input.vp-pass-bad ~ .vp-pass-bad{
+    display: block;
+}
+input.vp-pass-weak ~ .vp-pass-weak{
+    display: block;
+}
+input.vp-pass-safe ~ .vp-pass-safe{
+    display: block;
+}
+input.vp-pass-strong ~ .vp-pass-strong{
+    display: block;
+}
+
+progress.vp-password-progress{
+    display: block;
+    width: calc(100% - 1em);
+    height: .2em;
+    vertical-align: top;
+    margin-left: .5em;
+    margin-right: .5em;
+	background-color: transparent;
+	-webkit-appearance: none;
+    border: none;
+    color: var(--primary-3);
+}
+
+progress.vp-password-progress::-webkit-progress-bar{
+    background-color: transparent;
+	border-radius: 9px;
+}
+progress.vp-password-progress::-webkit-progress-value{
+    color: var(--primary-3);
+    background-color: var(--primary-3);
+}
+
+progress.vp-password-progress::-moz-progress-bar{
+    background-color: var(--primary-3);
 }

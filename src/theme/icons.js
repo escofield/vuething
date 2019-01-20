@@ -1,3 +1,11 @@
 export default {
-  fonts: ['angle-down', 'check', 'close', 'home', 'homeOutline', 'radio'],
+  fonts: [
+    'angle-down',
+    'check',
+    'close',
+    'eye',
+    'home',
+    'homeOutline',
+    'radio',
+  ],
 }

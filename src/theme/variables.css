@@ -1,20 +1,114 @@
 
 :root {
+  --primary-1: var(--lt-primary-1);
+  --primary-2: var(--lt-primary-2);
+  --primary-3: var(--lt-primary-3);
+  --primary-4: var(--lt-primary-4);
+
+  --info-1: var(--lt-info-1);
+  --info-2: var(--lt-info-2);
+  --info-3: var(--lt-info-3);
+  --info-4: var(--lt-info-4);
+
+  --warning-1: var(--lt-warning-1);
+  --warning-2: var(--lt-warning-2);
+  --warning-3: var(--lt-warning-3);
+  --warning-4: var(--lt-warning-4);
+
+  --error-1: var(--lt-error-1);
+  --error-2: var(--lt-error-2);
+  --error-3: var(--lt-error-3);
+  --error-4: var(--lt-error-4);
+
+  --success-1: var(--lt-success-1);
+  --success-2: var(--lt-success-2);
+  --success-3: var(--lt-success-3);
+  --success-4: var(--lt-success-4);
+
+  --base-1: var(--lt-base-1);
+  --base-2: var(--lt-base-2);
+  --base-3: var(--lt-base-3);
+  --base-4: var(--lt-base-4);
+  --base-5: var(--lt-base-5);
+  --base-6: var(--lt-base-6);
+  --base-7: var(--lt-base-7);
+
+  --control-1: var(--lt-control-1);
+  --control-2: var(--lt-control-2);
+  --control-3: var(--lt-control-3);
+  --control-4: var(--lt-control-4);
+  --control-5: var(--lt-control-5);
+  --control-6: var(--lt-control-6);
+  --control-7: var(--lt-control-7);
+
+  --info-color: var(--lt-info-color);
+  --info-color-text: var(--lt-info-color-text);
+  --info-color-secondary-text: var(--lt-info-color-secondary-text);
+
+  --info-light-color: var(--lt-info-light-color);
+  --info-light-color-text: var(--lt-info-light-color-text);
+  --info-light-color-secondary-text: var(--lt-info-light-color-secondary-text);
+
+  --info-dark-color: var(--lt-info-dark-color);
+  --info-dark-color-text: var(--lt-info-dark-color-text);
+  --info-dark-color-secondary-text: var(--lt-info-dark-color-secondary-text);
+  
+  --warning-color: var(--lt-warning-color);
+  --warning-color-text: var(--lt-warning-color-text);
+  --warning-color-secondary-text: var(--lt-warning-color-secondary-text);
+
+  --warning-light-color: var(--lt-warning-light-color);
+  --warning-light-color-text: var(--lt-warning-light-color-text);
+  --warning-light-color-secondary-text: var(--lt-warning-light-color-secondary-text);
+
+  --warning-dark-color: var(--lt-warning-dark-color);
+  --warning-dark-color-text: var(--lt-warning-dark-color-text);
+  --warning-dark-color-secondary-text: var(--lt-warning-dark-color-secondary-text);
+
+
+  --error-color: var(--lt-error-color);
+  --error-color-text: var(--lt-error-color-text);
+  --error-color-secondary-text: var(--lt-error-color-secondary-text);
+
+  --error-light-color: var(--lt-error-light-color);
+  --error-light-color-text: var(--lt-error-light-color-text);
+  --error-light-color-secondary-text: var(--lt-error-light-color-secondary-text);
+
+  --error-dark-color: var(--lt-error-dark-color);
+  --error-dark-color-text: var(--lt-error-dark-color-text);
+  --error-dark-color-secondary-text: var(--lt-error-dark-color-secondary-text);
+
+  --success-color: var(--lt-success-color);
+  --success-color-text: var(--lt-success-color-text);
+  --success-color-secondary-text: var(--lt-success-color-secondary-text);
+
+  --success-light-color: var(--lt-success-light-color);
+  --success-light-color-text: var(--lt-success-light-color-text);
+  --success-light-color-secondary-text: var(--lt-success-light-color-secondary-text);
+
+  --success-dark-color: var(--lt-success-dark-color);
+  --success-dark-color-text: var(--lt-success-dark-color-text);
+  --success-dark-color-secondary-text: var(--lt-success-dark-color-secondary-text);
+
+
+
+
+
+
+
+
+
+
+
+
   --base-body-color: var(--lt-base-body-color);
-  --panel-color: var(--lt-panel-color);
-  --primary-color: var(--lt-primary-color);
-  --primary-color-dim: var(--lt-primary-color-dim);
-  --primary-color-dark: var(--lt-primary-color-dark);
+  --control-color: var(--lt-control-color);
   --base-text-color: var(--lt-base-text-color);
   --base-text-back: var(--lt-base-text-back);
   --base-text-dim-color:  var(--lt-base-text-dim-color);
-  --info-color: var(--lt-info-color);
-  --warning-color: var(--lt-warning-color);
-  --error-color: var(--lt-error-color);
-  --success-color: var(--lt-success-color);
   --button-text-color: var(--lt-button-text-color);
   --button-shadow-color: var(--lt-button-shadow-color);
-  --panel-shadow-color: var(--lt-panel-shadow-color);
+  --control-shadow-color: var(--lt-control-shadow-color);
   --chip-back-color: var(--lt-chip-back-color);
   --chip-text-color: var(--lt-chip-text-color);
   --control-fill-color: var(--lt-control-fill-color);
