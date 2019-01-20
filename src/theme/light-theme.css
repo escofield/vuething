@@ -33,16 +33,16 @@
     --lt-base-6: hsl(221, 15%, 25%);
     --lt-base-7: hsl(221, 15%, 5%);
 
-    --lt-panel-1: hsl(221, 15%, 100%);
-    --lt-panel-2: hsl(221, 15%, 94%);
-    --lt-panel-3: hsl(221, 15%, 75%);
-    --lt-panel-4: hsl(221, 15%, 60%);
-    --lt-panel-5: hsl(221, 15%, 41%);
-    --lt-panel-6: hsl(221, 15%, 25%);
-    --lt-panel-7: hsl(221, 15%, 5%);
+    --lt-control-1: hsl(221, 15%, 100%);
+    --lt-control-2: hsl(221, 15%, 94%);
+    --lt-control-3: hsl(221, 15%, 75%);
+    --lt-control-4: hsl(221, 15%, 60%);
+    --lt-control-5: hsl(221, 15%, 41%);
+    --lt-control-6: hsl(221, 15%, 25%);
+    --lt-control-7: hsl(221, 15%, 5%);
 
     --lt-button-shadow-color: rgba(0,0,0,.5);
-    --lt-panel-shadow-color: rgba(0,0,0,.12);
+    --lt-control-shadow-color: rgba(0,0,0,.12);
     --lt-mask-color: rgba(0,0,0,.72);
     --lt-loading-mask-color: rgba(255,255,255,.72);
 }

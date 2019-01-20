@@ -22,11 +22,11 @@
     "proxy": "node proxy.js"
   },
   "dependencies": {
+    "@escofieldpublic/postcss-responsive-custom": "^0.2.0",
     "axios": "^0.18.0",
     "axios-mock-adapter": "^1.16.0",
     "idle-js": "^0.1.3",
     "postcss": "^7.0.13",
-    "@escofieldpublic/postcss-responsive-custom": "^0.2.0",
     "postcss-preset-env": "^6.5.0",
     "uuid": "^3.3.2",
     "vee-validate": "^2.1.5",
@@ -35,7 +35,8 @@
     "vue-i18n": "^8.7.0",
     "vue-router": "^3.0.1",
     "vue-tidyroutes": "^0.1.2",
-    "vuex": "^3.0.1"
+    "vuex": "^3.0.1",
+    "zxcvbn": "^4.4.2"
   },
   "devDependencies": {
     "pug": "^2.0.3",

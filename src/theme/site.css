@@ -1,7 +1,7 @@
 
 html {
-    color: var(--base-4);
-    background-color: var(--base-2);
+    color: var(--control-4);
+    background-color: var(--control-2);
 }
 
 body {
@@ -68,100 +68,51 @@ h3,
 h4,
 h5,
 h6 {
-    color: var(--base-5);
+    color: var(--control-5);
 }
 
 input,
 textarea,
 select {
-    color: var(--base-5);
-    background-color: var(--base-3);
-    border: solid 1px var(--base-3);
+    color: var(--control-5);
+    background-color: var(--control-2);
+    border: solid 1px var(--control-2);
 }
 
 
 input[type="checkbox"].vp-toggle{
-    background-color: var(--base-3);
-    color: var(--base-2);
+    background-color: var(--control-2);
+    color: var(--control-2);
 }
 
 input[type="checkbox"].vp-toggle:after{
-    background-color: var(--base-2);
-    border:solid 3px var(--base-2);
+    background-color: var(--control-2);
+    border:solid 3px var(--control-2);
 }
 
 input[type=checkbox].vp-toggle::-ms-check {
-    color: var(--base-2);
-    background-color: var(--base-2);
+    color: var(--control-2);
+    background-color: var(--control-2);
 }
 
 input[type=range]::-webkit-slider-runnable-track {
-    background: var(--base-3);
-    border: solid 1px var(--base-3);
+    background: var(--control-2);
+    border: solid 1px var(--control-2);
 }
 
 input[type=range]::-moz-range-track {
-    background: var(--base-3);
+    background: var(--control-2);
 }
 
 .vp-chip {
-    background-color: var(--base-3);
-    color: var(--base-4);
+    background-color: var(--control-2);
+    color: var(--control-4);
 }
 
 .vp-modal > section,
 .vp-panel { 
-    color: var(--panel-4);
-    background-color: var(--panel-1);
-}
-
-.vp-panel h1,
-.vp-panel h2, 
-.vp-panel h3, 
-.vp-panel h4, 
-.vp-panel h5, 
-.vp-panel h6 {
-    color: var(--panel-5);
-}
-.vp-panel button {
-    color: var(--panel-5);
-}
-
-.vp-panel input,
-.vp-panel textarea,
-.vp-panel select {
-    color: var(--panel-5);
-    background-color: var(--panel-2);
-    border: solid 1px var(--panel-2);
-}
-
-.vp-panel input[type="checkbox"].vp-toggle{
-    background-color: var(--panel-3);
-    color: var(--panel-2);
-}
-
-.vp-panel input[type="checkbox"].vp-toggle:after{
-    background-color: var(--panel-2);
-    border:solid 3px var(--panel-2);
-}
-
-.vp-panel input[type=checkbox].vp-toggle::-ms-check {
-    color: var(--panel-2);
-    background-color: var(--panel-2);
-}
-
-.vp-panel input[type=range]::-webkit-slider-runnable-track {
-    background: var(--panel-3);
-    border: solid 1px var(--panel-3);
-}
-
-.vp-panel input[type=range]::-moz-range-track {
-    background: var(--panel-3);
-}
-
-.vp-panel .vp-chip {
-    background-color: var(--panel-2);
-    color: var(--panel-5);
+    color: var(--control-4);
+    background-color: var(--control-1);
 }
 
 .vp-panel {
@@ -312,11 +263,10 @@ i.vp-postfix:before {
     padding-top:1px;
 }
 i.vp-prefix:before {
-    responsive: padding-left .5rem .8rem;
+    right: -1.4em
 }
 i.vp-postfix:before {
-    right: 0px;
-    responsive: padding-right 1rem 1.5rem;
+    right: .4em;
 }
 input.vp-postfix{
     responsive: padding-right 2.2rem 3rem;
@@ -347,7 +297,7 @@ button.vp-btn-error:hover {
     transition : all 100ms ease-in;
 }
 .vp-panel button.vp-btn-text{ 
-    color: var(--panel-5);
+    color: var(--control-5);
 }
 button.vp-btn-text:hover {
     filter: brightness(115%);
@@ -356,8 +306,8 @@ button.vp-btn-text:hover {
     transition : all 100ms ease-in;
 }
 .vp-panel button.vp-btn-default{ 
-    border: solid 1px var(--panel-3);
-    color: var(--panel-5);
+    border: solid 1px var(--control-3);
+    color: var(--control-5);
 }
 .vp-panel button.vp-btn-default:hover {
     filter: brightness(115%);
@@ -870,4 +820,54 @@ input.accordian:checked ~ section.accordian {
 }
 .vp-spinner:after {
     animation: bounce-middle 0.6s ease 0.2s infinite;
+}
+
+.vp-pass-no-score,
+.vp-pass-bad,
+.vp-pass-weak,
+.vp-pass-safe,
+.vp-pass-strong{
+    display: none;
+}
+
+input.vp-pass-no-score ~ .vp-pass-no-score{
+    display: block;
+}
+input.vp-pass-bad ~ .vp-pass-bad{
+    display: block;
+}
+input.vp-pass-weak ~ .vp-pass-weak{
+    display: block;
+}
+input.vp-pass-safe ~ .vp-pass-safe{
+    display: block;
+}
+input.vp-pass-strong ~ .vp-pass-strong{
+    display: block;
+}
+
+progress.password-progress{
+    display: block;
+    width: calc(100% - 1em);
+    height: .2em;
+    vertical-align: top;
+    margin-left: .5em;
+    margin-right: .5em;
+	background-color: transparent;
+	-webkit-appearance: none;
+    border: none;
+    color: var(--primary-3);
+}
+
+progress.password-progress::-webkit-progress-bar{
+    background-color: transparent;
+	border-radius: 9px;
+}
+progress.password-progress::-webkit-progress-value{
+    color: var(--primary-3);
+    background-color: var(--primary-3);
+}
+
+progress.password-progress::-moz-progress-bar{
+    background-color: var(--primary-3);
 }

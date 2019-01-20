@@ -15,6 +15,9 @@ let Stylish = {
       btnSuccess: 'success',
       colors: ['primary', 'info', 'warning', 'error', 'success'],
       base: 7,
+      password: '',
+      pType: 'password',
+      passwordStrength: 0,
     }
   },
   methods: {
@@ -29,6 +32,13 @@ let Stylish = {
     },
     colorProp(property, color, key) {
       return `${property}: var(--${color}-${key})`
+    },
+    pTypeToggle() {
+      if (this.pType == 'password') {
+        this.pType = 'text'
+      } else {
+        this.pType = 'password'
+      }
     },
   },
 }
@@ -55,11 +65,7 @@ export default Stylish
           h3.color-text(:style="colorProp('color', color, 1)") {{ color }}
           h4.color-secondary(:style="colorProp('color', color, 2)") Secondary Text
       template(v-for="index in 7")
-        .swatch(:style="colorProp('background-color', 'base', index)")
-          h3 Root Grayscale
-
-      template(v-for="index in 7")
-        .swatch(:style="colorProp('background-color', 'panel', index)")
+        .swatch(:style="colorProp('background-color', 'control', index)")
           h3 Panel Grayscale
 
   .vp-panel
@@ -85,6 +91,7 @@ export default Stylish
     input(name="iname" value="some text")
 
     label(for="iname") Input label
+    
     i.vp-prefix.icon.icon-home
     input.vp-prefix.vp-postfix(name="iname" value="some text")
     i.icon.vp-postfix.icon.icon-homeOutline
@@ -193,14 +200,24 @@ export default Stylish
     | {{ phoneNo }}
 
   .vp-panel
-    .vp-loading-container
+    div
       h1 Loading
-      .vp-loading(v-if="loading")
-        .vp-loading-mask
-          .vp-spinner
+      div(v-loading v-if="loading")
     button.vp-btn-primary(@click="loading=!loading")  loading toggle
+  
+  .vp-panel
+    h1 Password
 
-
+    .password-container
+      input.vp-postfix(v-password="passwordStrength" v-model="password" type="input")
+      i.vp-postfix.icon.icon-eye.password-eye(@click="pTypeToggle" :class="pType")
+      progress.password-progress(:value="passwordStrength" max="4")
+      .vp-pass-no-score no score
+      .vp-pass-bad is bad
+      .vp-pass-weak weak
+      .vp-pass-safe safe
+      .vp-pass-strong strong
+      .score score: {{ passwordStrength }}
 </template>
 <style lang="postcss" scoped>
 span.badge {
@@ -210,6 +227,23 @@ span.badge {
   margin-top: 1rem;
   border-radius: 0.7 rem;
   background-color: blue;
+}
+.password-container {
+  position: relative;
+}
+.password-eye {
+  color: var(--primary-3);
+}
+.password-eye:hover {
+  cursor: pointer;
+}
+.password-eye:before {
+  padding: none;
+  right: 0.3em;
+  transition: all 0.25s ease-out;
+}
+.password-eye.text:before {
+  transform: rotate(150deg);
 }
 
 .btns > button {

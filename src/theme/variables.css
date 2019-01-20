@@ -33,13 +33,13 @@
   --base-6: var(--lt-base-6);
   --base-7: var(--lt-base-7);
 
-  --panel-1: var(--lt-panel-1);
-  --panel-2: var(--lt-panel-2);
-  --panel-3: var(--lt-panel-3);
-  --panel-4: var(--lt-panel-4);
-  --panel-5: var(--lt-panel-5);
-  --panel-6: var(--lt-panel-6);
-  --panel-7: var(--lt-panel-7);
+  --control-1: var(--lt-control-1);
+  --control-2: var(--lt-control-2);
+  --control-3: var(--lt-control-3);
+  --control-4: var(--lt-control-4);
+  --control-5: var(--lt-control-5);
+  --control-6: var(--lt-control-6);
+  --control-7: var(--lt-control-7);
 
   --info-color: var(--lt-info-color);
   --info-color-text: var(--lt-info-color-text);
@@ -102,13 +102,13 @@
 
 
   --base-body-color: var(--lt-base-body-color);
-  --panel-color: var(--lt-panel-color);
+  --control-color: var(--lt-control-color);
   --base-text-color: var(--lt-base-text-color);
   --base-text-back: var(--lt-base-text-back);
   --base-text-dim-color:  var(--lt-base-text-dim-color);
   --button-text-color: var(--lt-button-text-color);
   --button-shadow-color: var(--lt-button-shadow-color);
-  --panel-shadow-color: var(--lt-panel-shadow-color);
+  --control-shadow-color: var(--lt-control-shadow-color);
   --chip-back-color: var(--lt-chip-back-color);
   --chip-text-color: var(--lt-chip-text-color);
   --control-fill-color: var(--lt-control-fill-color);

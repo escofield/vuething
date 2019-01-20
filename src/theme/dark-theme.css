@@ -25,24 +25,16 @@
     --dk-success-3: hsl(150, 77%, 41%);
     --dk-success-4: hsl(150, 77%, 18%);
 
-    --dk-base-1: hsl(210, 4%, 15%);
-    --dk-base-2: hsl(210, 4%, 5%);
-    --dk-base-3: hsl(210, 4%, 41%);
-    --dk-base-4: hsl(210, 4%, 60%);
-    --dk-base-5: hsl(210, 4%, 75%);
-    --dk-base-6: hsl(210, 4%, 94%);
-    --dk-base-7: hsl(210, 4%, 100%);
-
-    --dk-panel-1: hsl(204, 5%, 20%);
-    --dk-panel-2: hsl(210, 4%, 15%);
-    --dk-panel-3: hsl(210, 4%, 41%);
-    --dk-panel-4: hsl(210, 4%, 60%);
-    --dk-panel-5: hsl(210, 4%, 75%);
-    --dk-panel-6: hsl(210, 4%, 94%);
-    --dk-panel-7: hsl(210, 4%, 100%);
+    --dk-control-1: hsl(204, 5%, 20%);
+    --dk-control-2: hsl(210, 4%, 15%);
+    --dk-control-3: hsl(210, 4%, 41%);
+    --dk-control-4: hsl(210, 4%, 60%);
+    --dk-control-5: hsl(210, 4%, 75%);
+    --dk-control-6: hsl(210, 4%, 94%);
+    --dk-control-7: hsl(210, 4%, 100%);
 
     --dk-button-shadow-color: rgba(0,0,0,.5);
-    --dk-panel-shadow-color: rgba(0,0,0,.12);
+    --dk-control-shadow-color: rgba(0,0,0,.12);
     --dk-mask-color: rgba(0,0,0,.72);
     --dk-loading-mask-color: rgba(48, 51, 53,.72);
 }
