@@ -13,7 +13,8 @@ let Stylish = {
       iconHome: ['icon', 'icon-home'],
       badgeCount: 5,
       btnSuccess: 'success',
-      colors: ['Primary', 'Primary Light', 'Primary Dark']
+      colors: ['primary', 'info', 'warning', 'error', 'success'],
+      base: 7,
     }
   },
   methods: {
@@ -26,9 +27,9 @@ let Stylish = {
     closeModal() {
       console.log('close modal')
     },
-    toClassName(v){
-      return v.toLowerCase().replace(' ', '-')
-    }
+    colorProp(property, color, key) {
+      return `${property}: var(--${color}-${key})`
+    },
   },
 }
 VueTidyRoutes.route(`/:locale(\\w\\w)?/stylish`, {
@@ -43,11 +44,18 @@ export default Stylish
   .vp-panel
     h1 colors
     .color-pal
-      .swatch(v-for="color in colors" :class="toClassName(color)")
-        h3.color-text {{ color }}
-        h4.color-secondary Secondary Text
-
-
+      template(v-for="color in colors")
+        .swatch(:style="colorProp('background-color', color, 2)")
+          h3.color-text(:style="colorProp('color', color, 3)") {{ color }}
+          h4.color-secondary(:style="colorProp('color', color, 4)") Secondary Text
+        .swatch(:style="colorProp('background-color', color, 3)")
+          h3.color-text(:style="colorProp('color', color, 1)") {{ color }}
+          h4.color-secondary(:style="colorProp('color', color, 2)") Secondary Text
+        .swatch(:style="colorProp('background-color', color, 4)")
+          h3.color-text(:style="colorProp('color', color, 3)") {{ color }}
+          h4.color-secondary(:style="colorProp('color', color, 2)") Secondary Text
+      template(v-for="index in 7")
+        .swatch(:style="colorProp('background-color', 'base', index)")
 
   .vp-panel
     h1 Fonts
@@ -129,7 +137,7 @@ export default Stylish
 
   .vp-panel
     h1 Panel
-      p some panel with some text and stuff.  Whow knows what you can put into a panel!  The world is your Oyster!
+    p some panel with some text and stuff.  Whow knows what you can put into a panel!  The world is your Oyster!
 
   .vp-panel
     h1 Chips
@@ -202,26 +210,15 @@ span.badge {
   margin-bottom: 1rem;
 }
 
-.color-pal{
+.color-pal {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-column-gap: 1em;
-  grid-row-gap: .5em;
+  grid-column-gap: 0em;
+  grid-row-gap: 0.5em;
 }
 
 .swatch {
-  width: 100%;
   height: 5rem;
   padding: 1rem;
-}
-
-.swatch.primary{
-  background-color: var(--primary-color)
-}
-.primary > .color-text {
-  color: var(--primary-color-text);
-}
-.primary > .color-secondary {
-  color: var(--primary-color-secondary-text);
 }
 </style>

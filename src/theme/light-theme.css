@@ -1,49 +1,40 @@
 /* only to be referenced from variables.css */
 :root{
-    --lt-primary-color: #bb16a3;
-    --lt-primary-color-text: #ffeefc;
-    --lt-primary-color-secondary-text: #dabad5;
+    --lt-primary-1: hsl(309, 79%, 95%);
+    --lt-primary-2: hsl(309, 79%, 80%);
+    --lt-primary-3: hsl(309, 79%, 41%);
+    --lt-primary-4: hsl(309, 79%, 20%);
 
-    --lt-primary-light-color: #fdbff4;
-    --lt-primary-light-color-text: #41203c;
-    --lt-primary-light-color-secondary-text: #52364d;
+    --lt-info-1: hsl(220, 100%, 95%);
+    --lt-info-2: hsl(220, 100%, 80%);
+    --lt-info-3: hsl(220, 100%, 41%);
+    --lt-info-4: hsl(220, 100%, 15%);
 
-    --lt-primary-dark-color: #3d0134;
-    --lt-primary-dark-color-text: #ddb4d7;
-    --lt-primary-dark-color-secondary-text: #94748f;
+    --lt-warning-1: hsl(36, 100%, 95%);
+    --lt-warning-2: hsl(36, 100%, 80%);
+    --lt-warning-3: hsl(36, 100%, 41%);
+    --lt-warning-4: hsl(36, 100%, 20%);
 
+    --lt-error-1: hsl(0, 67%, 95%);
+    --lt-error-2: hsl(0, 67%, 80%);
+    --lt-error-3: hsl(0, 67%, 41%);
+    --lt-error-4: hsl(0, 67%, 18%);
 
-    --lt-info-color: #256eff;
-    --lt-warning-color: #f90;
-    --lt-error-color: #d32929;
-    --lt-success-color: #19be6b;
+    --lt-success-1: hsl(150, 77%, 95%);
+    --lt-success-2: hsl(150, 77%, 80%);
+    --lt-success-3: hsl(150, 77%, 41%);
+    --lt-success-4: hsl(150, 77%, 18%);
 
+    --lt-base-1: hsl(221, 15%, 100%);
+    --lt-base-2: hsl(221, 15%, 94%);
+    --lt-base-3: hsl(221, 15%, 75%);
+    --lt-base-4: hsl(221, 15%, 60%);
+    --lt-base-5: hsl(221, 15%, 41%);
+    --lt-base-6: hsl(221, 15%, 25%);
+    --lt-base-7: hsl(221, 15%, 5%);
 
-
-    --lt-primary-color-dark: #3d0134;
-
-
-
-
-
-
-    --lt-base-body-color: rgb(185, 185, 185);
-    --lt-panel-color: #fff;
-
-    --lt-base-text-color: #515a6e;
-    --lt-base-text-dim-color: #9fa7b9;
-    --lt-base-text-back: #f5f5f5;
-    --lt-button-text-color: white;
     --lt-button-shadow-color: rgba(0,0,0,.5);
     --lt-panel-shadow-color: rgba(0,0,0,.12);
-    --lt-chip-back-color: #f5f5f5;
-    --lt-chip-text-color: #515a6e;
-    --lt-control-fill-color: #878b94;
-    --lt-control-alt-fill-color: #e7e8eb;
-    --lt-control-on-fill-color: #bb16a3;
-    --lt-control-text-color: #515a6e;
-    --lt-control-alt-text-color: #fafafa;
-    --lt-control-text-dim-color: #333333;
     --lt-mask-color: rgba(0,0,0,.72);
     --lt-loading-mask-color: rgba(255,255,255,.72);
 }
