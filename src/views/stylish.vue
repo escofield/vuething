@@ -56,6 +56,11 @@ export default Stylish
           h4.color-secondary(:style="colorProp('color', color, 2)") Secondary Text
       template(v-for="index in 7")
         .swatch(:style="colorProp('background-color', 'base', index)")
+          h3 Root Grayscale
+
+      template(v-for="index in 7")
+        .swatch(:style="colorProp('background-color', 'panel', index)")
+          h3 Panel Grayscale
 
   .vp-panel
     h1 Fonts
@@ -175,6 +180,7 @@ export default Stylish
     button.vp-btn-primary(@click="showModal=!showModal") Open
     .vp-modal(:data-open="showModal" @click="showModal=!showModal")
       section(@click.stop)
+        .vp-close-modal(@click="showModal=!showModal")  Close
         h1 Hey modal
         main
         nav

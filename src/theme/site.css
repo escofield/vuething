@@ -719,7 +719,7 @@ input.accordian:checked ~ section.accordian {
     bottom: 0;
     z-index: 1;
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     background-color: var(--mask-color);
 }
 
@@ -732,23 +732,41 @@ input.accordian:checked ~ section.accordian {
     position: relative;
 }
 
-.vp-modal > section > .vp-close-modal:hover:after{
+.vp-modal > section > .vp-close-modal{
+    display: inline-block;
+    position: absolute;
+    top: .15em;
+    right: .5em;
+}
+
+.vp-modal > section > .vp-close-modal:hover{
     cursor: pointer;
 }
 
 .vp-modal > section > .vp-close-modal:after{
-    display: inline-block;
-    position: absolute;
-
     content: '\f103';
     font-family: icons;
-    top: .15em;
-    right: .5em;
+    margin-left: .5rem;
     transition : all 200ms ease-in;
+    position: relative;
+    top: .2rem;
 }
 
 .vp-modal[data-open] {
     display: block;
+}
+
+@media (max-width: 960px){
+
+    .vp-modal > section {
+        width: 100%;
+        margin: auto;
+        margin-top: .5em;
+        border-radius: 1em;
+        padding: 1em 2em;
+        position: relative;
+        box-sizing: border-box;
+    }
 }
 
 .vp-loader,
