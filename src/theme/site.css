@@ -1,6 +1,6 @@
 
 html {
-    color: var(--base-6);
+    color: var(--base-4);
     background-color: var(--base-2);
 }
 
@@ -68,10 +68,51 @@ h3,
 h4,
 h5,
 h6 {
-    color: var(-base-7);
+    color: var(--base-5);
 }
-.vp-panel { 
+
+input,
+textarea,
+select {
+    color: var(--base-5);
+    background-color: var(--base-3);
+    border: solid 1px var(--base-3);
+}
+
+
+input[type="checkbox"].vp-toggle{
+    background-color: var(--base-3);
+    color: var(--base-2);
+}
+
+input[type="checkbox"].vp-toggle:after{
+    background-color: var(--base-2);
+    border:solid 3px var(--base-2);
+}
+
+input[type=checkbox].vp-toggle::-ms-check {
+    color: var(--base-2);
+    background-color: var(--base-2);
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    background: var(--base-3);
+    border: solid 1px var(--base-3);
+}
+
+input[type=range]::-moz-range-track {
+    background: var(--base-3);
+}
+
+.vp-chip {
+    background-color: var(--base-3);
     color: var(--base-4);
+}
+
+.vp-modal > section,
+.vp-panel { 
+    color: var(--panel-4);
+    background-color: var(--panel-1);
 }
 
 .vp-panel h1,
@@ -80,7 +121,60 @@ h6 {
 .vp-panel h4, 
 .vp-panel h5, 
 .vp-panel h6 {
-    color: var(--base-5);
+    color: var(--panel-5);
+}
+.vp-panel button {
+    color: var(--panel-5);
+}
+
+.vp-panel input,
+.vp-panel textarea,
+.vp-panel select {
+    color: var(--panel-5);
+    background-color: var(--panel-2);
+    border: solid 1px var(--panel-2);
+}
+
+.vp-panel input[type="checkbox"].vp-toggle{
+    background-color: var(--panel-3);
+    color: var(--panel-2);
+}
+
+.vp-panel input[type="checkbox"].vp-toggle:after{
+    background-color: var(--panel-2);
+    border:solid 3px var(--panel-2);
+}
+
+.vp-panel input[type=checkbox].vp-toggle::-ms-check {
+    color: var(--panel-2);
+    background-color: var(--panel-2);
+}
+
+.vp-panel input[type=range]::-webkit-slider-runnable-track {
+    background: var(--panel-3);
+    border: solid 1px var(--panel-3);
+}
+
+.vp-panel input[type=range]::-moz-range-track {
+    background: var(--panel-3);
+}
+
+.vp-panel .vp-chip {
+    background-color: var(--panel-2);
+    color: var(--panel-5);
+}
+
+.vp-panel {
+    box-shadow: 1px 1px 5px  var(--panel-shadow-color);
+    border-radius: .7em;
+    padding: 1.5em;
+}
+.vp-panel + .vp-panel {
+    margin-top: 2em;
+}
+
+.vp-panel > h1:first-child {
+    text-align: center;
 }
 
 input[type="radio"],
@@ -107,7 +201,6 @@ input[type="checkbox"]:checked{
 }
 
 input[type="checkbox"] + label{
-    color: var(--base-5);
     display: inline-block;
     responsive: line-height outset 50;
     margin: 0;
@@ -170,17 +263,14 @@ input[type=checkbox]::-ms-check {
 }
 
 input, textarea, button, select {
-    color: var(--base-5);
     box-sizing: border-box;
 }
 
 input, textarea, select {
-    background-color: var(--base-2);
     padding: 0 1em;
     outline: none;
     width: 100%;
     box-shadow: border-box;
-    border: solid 1px var(--base-2);;
     transition: border 500ms ease-out;
 }
 
@@ -194,13 +284,12 @@ select {
 }
 
 label {
-    color: var(--base-3);
     margin-bottom: .3em;
     margin-top: 1em;
 }
 label.vp-required:after {
     content: "*";
-    color: red;
+    color: var(--error-3);
     margin-left: .2em;
 }
 
@@ -257,8 +346,8 @@ button.vp-btn-error:hover {
     filter: brightness(115%);
     transition : all 100ms ease-in;
 }
-button.vp-btn-text{ 
-    color: var(--base-5);
+.vp-panel button.vp-btn-text{ 
+    color: var(--panel-5);
 }
 button.vp-btn-text:hover {
     filter: brightness(115%);
@@ -266,11 +355,11 @@ button.vp-btn-text:hover {
     color: var(--primary-3);
     transition : all 100ms ease-in;
 }
-button.vp-btn-default{ 
-    border: solid 1px var(--base-3);
-    color: var(--base-5);
+.vp-panel button.vp-btn-default{ 
+    border: solid 1px var(--panel-3);
+    color: var(--panel-5);
 }
-button.vp-btn-default:hover {
+.vp-panel button.vp-btn-default:hover {
     filter: brightness(115%);
     border: solid 1px var(--primary-3);
     color: var(--primary-3);
@@ -405,9 +494,7 @@ input[type="checkbox"].vp-toggle{
     height: 1em;
     width: 2em;
     border-radius: 1em;
-    background-color: var(--base-3);
     border:none;
-    color: var(--base-2);
 }
 
 input[type="checkbox"].vp-toggle:after{
@@ -418,8 +505,6 @@ input[type="checkbox"].vp-toggle:after{
     border-radius: 50%;
     position: absolute;
     left: -.5em;
-    background-color: var(--base-2);
-    border:solid 3px var(--base-2);
     box-shadow: 1px 1px 6px  var(--button-shadow-color);
     top: 0;
     bottom: 0;
@@ -434,8 +519,6 @@ input[type="checkbox"].vp-toggle:checked:after{
 }
 
 input[type=checkbox].vp-toggle::-ms-check {
-    color: var(--base-2);
-    background-color: var(--base-2);;
     border: none;
     border-radius: 50%;
     transform: translate(-.5em,0);
@@ -462,8 +545,6 @@ input[type=range]::-webkit-slider-runnable-track {
     height: .5em;
     margin: none;
     box-sizing: border-box;
-    background: var(--base-3);
-    border: solid 1px var(--base-3);
     border-radius: 1em;
 }
 
@@ -483,7 +564,6 @@ input[type=range]::-moz-range-track {
     width: 100%;
     height: .5em;
     cursor: pointer;
-    background: var(--base-3);
     border: none;
     border-radius: 1em;
 }
@@ -526,23 +606,7 @@ input[type=range]:focus::-ms-fill-upper {
     background: transparent;
 }
 
-.vp-panel {
-    box-shadow: 1px 1px 5px  var(--panel-shadow-color);
-    border-radius: .7em;
-    background-color: var(--base-1);
-    padding: 1.5em;
-}
-.vp-panel + .vp-panel {
-    margin-top: 2em;
-}
-
-.vp-panel > h1:first-child {
-    text-align: center;
-}
-
 .vp-chip {
-    background-color: var(--base-2);
-    color: var(--base-5);
     border-radius: 1em;
     padding-top: .3em;
     padding-bottom: .3em;
@@ -660,7 +724,6 @@ input.accordian:checked ~ section.accordian {
 }
 
 .vp-modal > section {
-    background-color: white;
     width: 80vw;
     margin: auto;
     margin-top: 3em;

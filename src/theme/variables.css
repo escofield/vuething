@@ -33,6 +33,13 @@
   --base-6: var(--lt-base-6);
   --base-7: var(--lt-base-7);
 
+  --panel-1: var(--lt-panel-1);
+  --panel-2: var(--lt-panel-2);
+  --panel-3: var(--lt-panel-3);
+  --panel-4: var(--lt-panel-4);
+  --panel-5: var(--lt-panel-5);
+  --panel-6: var(--lt-panel-6);
+  --panel-7: var(--lt-panel-7);
 
   --info-color: var(--lt-info-color);
   --info-color-text: var(--lt-info-color-text);

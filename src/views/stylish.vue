@@ -52,7 +52,7 @@ export default Stylish
           h3.color-text(:style="colorProp('color', color, 1)") {{ color }}
           h4.color-secondary(:style="colorProp('color', color, 2)") Secondary Text
         .swatch(:style="colorProp('background-color', color, 4)")
-          h3.color-text(:style="colorProp('color', color, 3)") {{ color }}
+          h3.color-text(:style="colorProp('color', color, 1)") {{ color }}
           h4.color-secondary(:style="colorProp('color', color, 2)") Secondary Text
       template(v-for="index in 7")
         .swatch(:style="colorProp('background-color', 'base', index)")

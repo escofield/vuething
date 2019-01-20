@@ -27,11 +27,19 @@
 
     --lt-base-1: hsl(221, 15%, 100%);
     --lt-base-2: hsl(221, 15%, 94%);
-    --lt-base-3: hsl(221, 15%, 75%);
-    --lt-base-4: hsl(221, 15%, 60%);
+    --lt-base-3: hsl(221, 15%, 90%);
+    --lt-base-4: hsl(221, 15%, 55%);
     --lt-base-5: hsl(221, 15%, 41%);
     --lt-base-6: hsl(221, 15%, 25%);
     --lt-base-7: hsl(221, 15%, 5%);
+
+    --lt-panel-1: hsl(221, 15%, 100%);
+    --lt-panel-2: hsl(221, 15%, 94%);
+    --lt-panel-3: hsl(221, 15%, 75%);
+    --lt-panel-4: hsl(221, 15%, 60%);
+    --lt-panel-5: hsl(221, 15%, 41%);
+    --lt-panel-6: hsl(221, 15%, 25%);
+    --lt-panel-7: hsl(221, 15%, 5%);
 
     --lt-button-shadow-color: rgba(0,0,0,.5);
     --lt-panel-shadow-color: rgba(0,0,0,.12);
