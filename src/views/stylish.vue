@@ -66,7 +66,7 @@ export default Stylish
           h4.color-secondary(:style="colorProp('color', color, 2)") Secondary Text
       template(v-for="index in 7")
         .swatch(:style="colorProp('background-color', 'control', index)")
-          h3 Panel Grayscale
+          h3 Control
 
   .vp-panel
     h1 Fonts
@@ -185,7 +185,7 @@ export default Stylish
   .vp-panel
     h1 Modal
     button.vp-btn-primary(@click="showModal=!showModal") Open
-    .vp-modal(:data-open="showModal" @click="showModal=!showModal")
+    .vp-modal(v-body-overflow="showModal" :data-open="showModal" @click="showModal=!showModal")
       section(@click.stop)
         .vp-close-modal(@click="showModal=!showModal")  Close
         h1 Hey modal
@@ -196,8 +196,6 @@ export default Stylish
   .vp-panel
     h1 Phone number
     input(v-phone="phoneNo" v-model='phoneNo')
-    br
-    | {{ phoneNo }}
 
   .vp-panel
     div
@@ -208,16 +206,15 @@ export default Stylish
   .vp-panel
     h1 Password
 
-    .password-container
-      input.vp-postfix(v-password="passwordStrength" v-model="password" type="input")
-      i.vp-postfix.icon.icon-eye.password-eye(@click="pTypeToggle" :class="pType")
-      progress.password-progress(:value="passwordStrength" max="4")
-      .vp-pass-no-score no score
-      .vp-pass-bad is bad
-      .vp-pass-weak weak
-      .vp-pass-safe safe
-      .vp-pass-strong strong
-      .score score: {{ passwordStrength }}
+    input.vp-postfix(v-password="passwordStrength" v-model="password" type="input")
+    i.vp-postfix.icon.icon-eye.password-eye(@click="pTypeToggle" :class="pType")
+    progress.vp-password-progress(:value="passwordStrength" max="4")
+    .vp-pass-no-score no score
+    .vp-pass-bad is bad
+    .vp-pass-weak weak
+    .vp-pass-safe safe
+    .vp-pass-strong strong
+    .score score: {{ passwordStrength }}
 </template>
 <style lang="postcss" scoped>
 span.badge {
@@ -228,9 +225,7 @@ span.badge {
   border-radius: 0.7 rem;
   background-color: blue;
 }
-.password-container {
-  position: relative;
-}
+
 .password-eye {
   color: var(--primary-3);
 }

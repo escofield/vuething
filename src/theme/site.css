@@ -9,6 +9,10 @@ body {
     padding: 0px;
 }
 
+body.vp-body-no-scroll {
+    overflow: hidden;
+}
+
 h1 {
     responsive: font-size inset 10;
     responsive: line-height outset 10;
@@ -846,7 +850,7 @@ input.vp-pass-strong ~ .vp-pass-strong{
     display: block;
 }
 
-progress.password-progress{
+progress.vp-password-progress{
     display: block;
     width: calc(100% - 1em);
     height: .2em;
@@ -859,15 +863,15 @@ progress.password-progress{
     color: var(--primary-3);
 }
 
-progress.password-progress::-webkit-progress-bar{
+progress.vp-password-progress::-webkit-progress-bar{
     background-color: transparent;
 	border-radius: 9px;
 }
-progress.password-progress::-webkit-progress-value{
+progress.vp-password-progress::-webkit-progress-value{
     color: var(--primary-3);
     background-color: var(--primary-3);
 }
 
-progress.password-progress::-moz-progress-bar{
+progress.vp-password-progress::-moz-progress-bar{
     background-color: var(--primary-3);
 }
