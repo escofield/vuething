@@ -205,7 +205,7 @@ export default Stylish
   
   .vp-panel
     h1 Password
-    input.vp-postfix(v-password="passwordStrength" v-model="password" type="password")
+    input.vp-postfix(v-password="passwordStrength" v-model="password" :type="pType")
     i.vp-postfix.icon.icon-eye.password-eye(@click="pTypeToggle" :class="pType")
     progress.vp-password-progress(:value="passwordStrength" max="4")
     .vp-pass-no-score no score

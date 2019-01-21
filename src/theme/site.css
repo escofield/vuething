@@ -61,8 +61,7 @@ input[type="checkbox"].vp-toggle:after {
     border:solid 3px var(--control-2);
 }
 input[type=checkbox].vp-toggle::-ms-check {
-    color:var(--control-2);
-    background-color:var(--control-2);
+    background-color: var(--control-3);
 }
 input[type=range]::-webkit-slider-runnable-track {
     background:var(--control-2);
