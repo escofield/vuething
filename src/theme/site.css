@@ -336,9 +336,11 @@ input:focus,textarea:focus,select:focus {
     position:absolute;
     top:-1.9em;
     left:50%;
+    filter: drop-shadow(var(--button-shadow-color) 2px 2px 3px);
 }
 .vp-tooltip:hover:after,.vp-tooltip:hover:before {
     display:inline;
+    transition: all 4s  ease-in;
 }
 .vp-tooltip:hover:after {
     content:'';
