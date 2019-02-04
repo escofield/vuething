@@ -13,5 +13,4 @@ export default {
     footer
       site-footer
 </template>
-<style lang="postcss" scoped>
-</style>
+<style lang="postcss" scoped></style>

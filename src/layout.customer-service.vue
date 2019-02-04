@@ -53,5 +53,4 @@ export default {
     footer
       site-footer
 </template>
-<style scoped>
-</style>
+<style scoped></style>
