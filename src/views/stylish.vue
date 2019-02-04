@@ -42,7 +42,7 @@ let Stylish = {
     },
   },
 }
-VueTidyRoutes.route(`/:locale(\\w\\w)?/stylish`, {
+VueTidyRoutes.route(`/escofield/:locale(\\w\\w)?/`, {
   name: 'stylish',
   component: Stylish,
 })

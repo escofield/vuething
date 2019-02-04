@@ -10,7 +10,7 @@ let Default = {
     }
   },
 }
-VueTidyRoutes.route(`/:locale(\\w\\w)?/`, {
+VueTidyRoutes.route(`/:locale(\\w\\w)?/something`, {
   name: 'default',
   component: Default,
   meta: { layout: 'authenticated' },

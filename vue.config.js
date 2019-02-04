@@ -3,11 +3,10 @@ var webpack = require('webpack');
 var path = require('path');
 
 module.exports = {
+  baseUrl: process.env.NODE_ENV === 'production' ? '/escofield/' : '/',
   configureWebpack: {
     devtool: 'source-map',
   },
-
-  baseUrl: undefined,
   outputDir: undefined,
   assetsDir: undefined,
   runtimeCompiler: undefined,
