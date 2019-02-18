@@ -7,6 +7,7 @@ import './theme/dark-theme.css'
 import './theme/light-theme.css'
 import './theme/variables.css'
 import './theme/site.css'
+import './theme/vp.css'
 import './theme/icons.css'
 
 import layout_authenticated from './layout.authenticated'
