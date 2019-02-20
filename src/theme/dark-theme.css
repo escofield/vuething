@@ -33,7 +33,10 @@
     --dk-control-6: hsl(210, 4%, 94%);
     --dk-control-7: hsl(210, 4%, 100%);
 
-    --dk-button-shadow-color: rgba(0,0,0,.5);
+    --lt-shadow-color-0: rgba(0,0,0,.05);
+    --lt-shadow-color-1: rgba(0,0,0,.1);
+    --lt-shadow-color-2: rgba(0,0,0,.5);
+    
     --dk-mask-color: rgba(0,0,0,.72);
     --dk-loading-mask-color: rgba(48, 51, 53,.72);
 }

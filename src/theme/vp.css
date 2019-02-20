@@ -23,6 +23,7 @@ h3 {
     responsive:font-size inset 30;
     responsive:line-height outset 30;
     margin:0;
+    font-weight: 400;
 }
 input,textarea,button,select,i.vp-prefix,i.vp-postfix {
     responsive:font-size 1.3rem 1.55rem;
@@ -33,16 +34,19 @@ a,body,span,p,h4 {
     responsive:font-size inset 40;
     responsive:line-height outset 40;
     margin:0;
+    font-weight: 400;
 }
 .vp-chip,label,h5 {
     responsive:font-size inset 50;
     responsive:line-height outset 50;
     margin:0;
+    font-weight: 200;
 }
 h6 {
     responsive:font-size inset 60;
     responsive:line-height outset 60;
     margin:0;
+    font-weight: 200;
 }
 h1,h2,h3,h4,h5,h6 {
     color:var(--control-5);
@@ -82,9 +86,9 @@ input[type=range]::-moz-range-track {
     background-color:var(--control-1);
 }
 .vp-panel {
-    box-shadow:1px 1px 5px var(--panel-shadow-color);
-    border-radius:.7em;
-    padding:1.5em;
+    box-shadow:1px 1px 5px var(--shadow-color-1);
+    border-radius:.3em;
+    padding: 1em;
 }
 .vp-panel + .vp-panel {
     margin-top:2em;
@@ -170,10 +174,7 @@ input[type=checkbox]::-ms-check {
     border:none;
     color:var(--primary-1);
 }
-.layout > main {
-    responsive:padding content 10;
-    box-sizing:border-box;
-}
+
 input,textarea,button,select {
     box-sizing:border-box;
 }
@@ -317,7 +318,7 @@ input:focus,textarea:focus,select:focus {
     top:-1em;
     right:-1em;
     text-align:center;
-    box-shadow:1px 1px 6px var(--button-shadow-color);
+    box-shadow:1px 1px 6px var(--shadow-color-2);
     transition:all 250ms linear;
 }
 .vp-badge[data-count]:hover:after {
@@ -343,7 +344,7 @@ input:focus,textarea:focus,select:focus {
     position:absolute;
     top:-1.9em;
     left:50%;
-    filter: drop-shadow(var(--button-shadow-color) 2px 2px 3px);
+    filter: drop-shadow(var(--shadow-color-2) 2px 2px 3px);
 }
 .vp-tooltip:hover:after,.vp-tooltip:hover:before {
     display:inline;
@@ -376,7 +377,7 @@ input[type="checkbox"].vp-toggle:after {
     border-radius:50%;
     position:absolute;
     left:-.5em;
-    box-shadow:1px 1px 6px var(--button-shadow-color);
+    box-shadow:1px 1px 6px var(--shadow-color-2);
     top:0;
     bottom:0;
     margin:auto;
@@ -417,7 +418,7 @@ input[type=range]::-webkit-slider-runnable-track {
 input[type=range]::-webkit-slider-thumb {
     width:calc(1em + 3px);
     height:calc(1em + 3px);
-    box-shadow:1px 1px 6px var(--button-shadow-color);
+    box-shadow:1px 1px 6px var(--shadow-color-2);
     background:var(--primary-3);
     cursor:pointer;
     border-radius:50%;
@@ -435,7 +436,7 @@ input[type=range]::-moz-range-track {
 input[type=range]::-moz-range-thumb {
     width:calc(1em + 3px);
     height:calc(1em + 3px);
-    box-shadow:1px 1px 6px var(--button-shadow-color);
+    box-shadow:1px 1px 6px var(--shadow-color-2);
     background:var(--primary-3);
     cursor:pointer;
     border-radius:50%;
@@ -466,7 +467,7 @@ input[type=range]::-ms-fill-lower,input[type=range]::-ms-fill-upper,input[type=r
 .vp-chip {
     border-radius:1em;
     position:relative;
-    box-shadow:1px 1px 2px var(--button-shadow-color);
+    box-shadow:1px 1px 2px var(--shadow-color-1);
     display:inline-block;
     padding:.3em 1.2em;
 }
@@ -499,7 +500,7 @@ section.accordian {
     max-height:0;
     overflow:hidden;
     transition:all 1s ease-in-out;
-    box-shadow:0 2px 2px 0 var(--panel-shadow-color),0 1px 5px 0 var(--panel-shadow-color),0 3px 1px -2px var(--panel-shadow-color);
+    box-shadow:0 2px 2px 0 var(--shadow-color-1),0 1px 5px 0 var(--shadow-color-1),0 3px 1px -2px var(--shadow-color-1);
 }
 input.accordian + label {
     display:block;
@@ -521,10 +522,10 @@ input.accordian + label:hover {
 input.accordian:checked + label {
     cursor:pointer;
     color:var(--primary-1);
-    box-shadow:0 6px 8px -2px var(--button-shadow-color);
+    box-shadow:0 6px 8px -2px var(--shadow-color-1);
     margin-left:0;
     margin-right:0;
-    border-bottom:solid 2px var(--panel-shadow-color);
+    border-bottom:solid 2px var(--shadow-color-1);
     responsive:font-size inset 30;
     background:radial-gradient(ellipse at right top,var(--primary-2) -40%,var(--primary-3) 65%);
 }

@@ -26,14 +26,17 @@
     --lt-success-4: hsl(150, 77%, 18%);
 
     --lt-control-1: hsl(221, 15%, 100%);
-    --lt-control-2: hsl(221, 15%, 94%);
+    --lt-control-2: hsl(221, 15%, 97%);
     --lt-control-3: hsl(221, 15%, 75%);
     --lt-control-4: hsl(221, 15%, 60%);
-    --lt-control-5: hsl(221, 15%, 41%);
+    --lt-control-5: hsl(221, 15%, 45%);
     --lt-control-6: hsl(221, 15%, 25%);
     --lt-control-7: hsl(221, 15%, 5%);
 
-    --lt-button-shadow-color: rgba(0,0,0,.5);
+    --lt-shadow-color-0: rgba(0,0,0,.05);
+    --lt-shadow-color-1: rgba(0,0,0,.1);
+    --lt-shadow-color-2: rgba(0,0,0,.5);
+    
     --lt-mask-color: rgba(0,0,0,.72);
     --lt-loading-mask-color: rgba(255,255,255,.72);
 }
