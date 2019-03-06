@@ -18,6 +18,11 @@ let Stylish = {
       password: '',
       pType: 'password',
       passwordStrength: 0,
+      selectValue: '1',
+      selectOptions: [
+        { text: 'Option 1', value: '1' },
+        { text: 'Option 2 sdf sdfs ', value: '2' },
+      ],
     }
   },
   methods: {
@@ -113,6 +118,9 @@ export default Stylish
       option Here is the styled select box
       option The second option
       option The third option
+    label {{ selectValue }}
+    Select(v-model="selectValue" :options="selectOptions")
+
 
   .vp-panel
     h1 Checkbox
